@@ -2,37 +2,32 @@
 using namespace std;
 int main()
 {
-	long long int x,y,sum=0,i,j,max=0,min=0;
-	for( i=0;i<3;i++)
-	{
-		cin>>x>>y;
-		if(x<0 || y<0)
-		{
-			continue;
-		}
-		else
-		{
-			if(x>=y)
-			{
-				max=x;
-				min=y;
+  long long int x,y,sum=0,i,j,max=0,mini=0;
+  while(cin>>x>>y)
+  {
+ 
+  if(x<=0 || y<=0)
+  {
+  	continue;
+  }
+if(x>=y)
+{
+	max=x;
+	mini=y;
+}
+else
+{
+	max=y;
+	mini=x;
+}
+for(j=mini;j<=max;j++)
+{
+	cout<<j<<" ";
+	sum+=j;
+}
+cout<<"sum ="<<sum<<endl;
+sum=0;
+}
+return 0;
 
-			}
-			else
-			{
-				max=y;
-				min=x;
-			}
-			for( j= min;j<=max;j++)
-			{
-				cout<<j<<" ";
-                   sum+=j;
-			}
-			cout<<"sum ="<<sum<<endl;
-			sum=0;
-
-		}
-
-	}
-	return 0;
 }
