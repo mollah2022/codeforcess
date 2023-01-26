@@ -1,17 +1,39 @@
 #include<bits/stdc++.h>
 using namespace std;
-int main()
+
+bool is_lucky(int a)
 {
-int x,y;
-cin>>x>>y;
-if((x%4==0 && y%7==0)||(x%7==0 && x%4==0))
-{
-	cout<<4<<" "<<7<<endl;
+	while(a>0)
+	{
+		int digit=a%10;
+		if(!(digit == 4 || digit == 7))
+		{
+			return false;
+
+		}
+		a=a/10;
+	}
+	return true;
 }
 
-else
+int main()
 {
-	cout<<"-1\n";
-}
-return 0;
+	int x, y, i;
+	cin >> x >> y;
+	bool found=false;
+	for(int i = x ; i <= y ; i++)
+	{
+		if(is_lucky(i))
+		{
+			cout<<i<<" ";
+			found = true;
+		}
+		
+	}
+	if(!found)
+	{
+		cout<<-1<<endl;
+	}
+	return 0;
+
 }
