@@ -2,30 +2,32 @@
 using namespace std;
 int main()
 {
-	int number,s1,s2,sum=0,i;
-	cin>>number>>s1>>s2;
-	for(i=1;i<=number;i++)
+	int x,y,z,sum=0;
+	cin>>x>>y>>z;
+	for(int i=1;i<=x;i++)
 	{
 		if(i/10==0)
 		{
-			if(i>=s1 && s2>=i)
+			if(i>=y && i<=z)
 			{
 				sum+=i;
 			}
 		}
 		else
 		{
-			int number1,sum1=0,digit;
-			number1=i;
+			int number=i;
+			int my_sum=0;
 			while(number)
 			{
-				digit=number1%10;
-				sum1+=digit;
-				number1=number1/10;
-
+				int digit=number%10;
+				my_sum+=digit;
+				number=number/10;
 			}
-			if(sum1>=s1 && s2>=sum1)
-			sum+=i;
+			if(my_sum>=y && my_sum<=z)
+
+			{
+				sum+=i;
+			}
 		}
 	}
 	cout<<sum<<endl;

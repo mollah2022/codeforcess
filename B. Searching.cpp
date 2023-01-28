@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-	int x,count=0;
+	int x,flag=0;
 	cin>>x;
 	int s1[x];
 	for(int i=0;i<x;i++)
@@ -15,20 +15,14 @@ int main()
 	{
 		if(s1[i]==y)
 		{
-        count++;
+			cout<<i<<endl;
+			flag=1;
+			break;
 		}
 	}
-	if(count>1)
+	if(flag==0)
 	{
-		cout<<0<<endl;
-	}
-	else if(count!=1)
-	{
-		cout<<"-1\n";
-	}
-	else
-	{
-		cout<<1<<endl;
+		cout<<-1<<endl;
 	}
 	return 0;
 }
