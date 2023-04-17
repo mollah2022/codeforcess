@@ -3,15 +3,20 @@ using namespace std;
 
 int main()
 {
-	int x,y;
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	int x,y,count=0;
 	cin >> x >> y;
-	if(x-y==1||y-x==1||(x==y && x!=0 && y!=0))
+	int s1[x];
+	for(int i=0;i<x;i++)
 	{
-		cout<<"YES\n";
+		cin >> s1[i];
+		if(s1[i]==y)
+		{
+            count++;
+		}
 	}
-	else
-	{
-		cout<<"NO\n";
-	}
+	cout<<count+y<<endl;
+		count=0;
 	return 0;
 }

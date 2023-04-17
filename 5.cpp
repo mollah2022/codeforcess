@@ -3,12 +3,18 @@ using namespace std;
 
 int main()
 {
-	ios_base::sync_with_stdio(0);
-	cin.tie(0);
-
-	int x,y;
-	cin >> x >> y;
-	int c=(x^y);
-	cout<<c<<endl;
+	long long x;
+	cin >> x;
+	long long int r=x/4;
+	long long int c;
+	if(r%2==0)
+	{
+		c=x%4;
+	}
+	else
+	{
+		c=3-(x%4);
+	}
+	cout<<r<<" "<<c<<endl;
 	return 0;
 }

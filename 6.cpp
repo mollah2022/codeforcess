@@ -6,28 +6,37 @@ int main()
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
 
-	long long x,y,z;
-	cin >> x >> y >> z;
-
-	if(x%2==0 && z>0 && x<1)
+	long long int t,result=0;
+	cin >> t;
+	for(int i=0;i<t;i++)
 	{
-		cout<<y<<endl;
+		long long int counter=0;
+		long long int num;
+		cin >> num;
+		if(num%2!=0)
+		{
+			counter=0;
+		}
+		else
+		{
+			while(num>0)
+			{
+				if(num%2!=0)
+				{
+					break;
+				}
+				else
+				{
+					counter++;
+					num/=2;
+				}
+			}
+		}
+		if(counter>result)
+		{
+			result=counter;
+		}
 	}
-	else if(x%2==0 && y>x && z>0)
-	{
-		cout<<x/2<<endl;
-	}
-	else if(x<1)
-	{
-		cout<<0<<endl;
-	}
-	else if(x==1)
-	{
-		cout<<1<<endl;
-	}
-	else
-	{
-		cout<<y+((x-y)/2)<<endl;
-	}
+	cout<<result<<endl;
 	return 0;
 }
