@@ -3,22 +3,22 @@ using namespace std;
 
 int main()
 {
-	ios_base::sync_with_stdio(0);
-	cin.tie(0);
-	int t;
+	int t,s;
 	cin >> t;
 	while(t--)
-	{
-		int x,y;
-		cin >> x >> y;
-		if(x==y)
 		{
-			cout<<"Square\n";
+			int x,y;
+			cin >> x >> y;
+			s=(y*6)*6;
+			if(s>=x)
+			{
+				cout<<"YES\n";
+			}
+			else
+			{
+				cout<<"NO\n";
+			}
+
 		}
-		else
-		{
-			cout<<"Rectangle\n";
-		}
-	}
-	return 0;
+		return 0;
 }

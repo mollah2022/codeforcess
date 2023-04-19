@@ -1,36 +1,26 @@
 #include<bits/stdc++.h>
 using namespace std;
-
 int main()
 {
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
 
-	int x;
+	int x,a,b,c,d;
 	cin >> x;
-
-	for(int i=1;i<=x;i++)
-	{
-		for(int j=0;j<x;j++)
-		{
-			if(i==x/2+1 && j==i-1)
-			{
-				cout<<"X";
-			}
-			else if(j==x-i)
-			{
-				cout<<"/";
-			}
-			else if(j==i-1)
-			{
-				cout<<"\\";
-			}
-			else
-			{
-				cout<<"*";
-			}
-		}
-		cout<<endl;
-	}
+	a=x++;
+	b=++x;
+	c=x--;
+	d=--x;
+	cout<<a<<" "<<b<<" "<<c<<" "<<d<<" ";
+	a=++x-x--+--x-x++;
+	cout<<"\n"<<a<<" ";
+	b=--x-x--+(x++)+(++x);
+	cout<<"\n"<<b<<" ";
+	c=--x+(++x)-(x++)-(--x)-(x--)-(x);
+	cout<<"\n"<<c<<endl;
+	d=(--x)-(x--)-(++x)-(x++)+(++x)+(--x)+(x++)+(--x);
+	cout<<d<<" ";
+	int e=++x-(--x);
+	cout<<e<<endl;
 	return 0;
 }

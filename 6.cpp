@@ -6,37 +6,36 @@ int main()
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
 
-	long long int t,result=0;
+	int t,even=0,odd=0;
 	cin >> t;
-	for(int i=0;i<t;i++)
+	while(t--)
 	{
-		long long int counter=0;
-		long long int num;
-		cin >> num;
-		if(num%2!=0)
+		int x;
+		cin >> x;
+		int p;
+		p*=x;
+		for(int i=0;i<p;i++)
 		{
-			counter=0;
+			int g;
+			cin >> g;
+			if(g%2==0)
+			{
+				even++;
+			}
+			else
+			{
+				odd++;
+			}
+		}
+		if(even==odd)
+		{
+			cout<<"YES\n";
 		}
 		else
 		{
-			while(num>0)
-			{
-				if(num%2!=0)
-				{
-					break;
-				}
-				else
-				{
-					counter++;
-					num/=2;
-				}
-			}
+			cout<<"NO\n";
 		}
-		if(counter>result)
-		{
-			result=counter;
-		}
+		even=0,odd=0;
 	}
-	cout<<result<<endl;
 	return 0;
 }

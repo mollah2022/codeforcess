@@ -3,18 +3,22 @@ using namespace std;
 
 int main()
 {
-	long long x;
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+
+	int x,i;
 	cin >> x;
-	long long int r=x/4;
-	long long int c;
-	if(r%2==0)
+
+	cout<<"Right Shift\n";
+	for(int i=0;i<4;i++)
 	{
-		c=x%4;
+		cout<<(x>>i)<<" ";
 	}
-	else
+	cout<<endl;
+	cout<<"Left Shift\n";
+	for(int i=0;i<4;i++)
 	{
-		c=3-(x%4);
+		cout<<(x<<i)<<" ";
 	}
-	cout<<r<<" "<<c<<endl;
 	return 0;
 }

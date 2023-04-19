@@ -6,15 +6,25 @@ int main()
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
 
-	int x,y;
-	cin >> x >> y;
-	if(x>y)
+	int t;
+	cin >> t;
+	while(t--)
 	{
-		cout<<x-y<<endl;
-	}
-	else
-	{
-		cout<<0<<endl;
+		int x;
+		cin >> x;
+		int a,b;
+		a=x/3;
+		b=x/3;
+		if(x%3==1)
+		{
+			a++;
+		}
+		else
+		{
+			b++;
+		}
+		cout<<a<<" "<<b<<endl;
 	}
 	return 0;
+
 }
