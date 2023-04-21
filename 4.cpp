@@ -3,10 +3,17 @@ using namespace std;
 
 int main()
 {
-	int num1,num2;
-	cin >> num1 >> num2;
-	int p=(~num2);
-	cout<<p<<endl;
-	cout<<(num1+p)<<endl;
-	return 0;
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+
+    int t;
+    cin >> t;
+    while(t--)
+    {
+
+	long long int x;
+	cin >> x;
+	cout<<2<<" "<<(x-1)<<endl;
+}
+return 0;
 }

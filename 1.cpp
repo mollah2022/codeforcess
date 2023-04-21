@@ -3,28 +3,32 @@ using namespace std;
 
 int main()
 {
-	ios_base::sync_with_stdio(0);
-	cin.tie(0);
-
-	int t;
+	int t,sum=0;
 	cin >> t;
 	while(t--)
 	{
 		int x;
 		cin >> x;
-		int a,b;
-		a=x/3;
-		b=x/3;
-		if(x%3==1)
+		int s1[x];
+
+		for(int i=0;i<x;i++)
 		{
-			a++;
+			cin >> s1[i];
+             sum+=s1[i];
+		}
+		if(sum==x)
+		{
+			cout<<0<<endl;
+		}
+		else if(sum<x)
+		{
+			cout<<1<<endl;
 		}
 		else
 		{
-			b++;
+			cout<<sum-x<<endl;
 		}
-		cout<<a<<" "<<b<<endl;
+		sum=0;
 	}
 	return 0;
-
 }
