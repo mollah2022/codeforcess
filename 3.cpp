@@ -1,31 +1,33 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
-int main()
+int32_t main()
 {
-    int arr[1001];
+   ios_base::sync_with_stdio(0);
+   cin.tie(0);
 
-    int j = 1;
-    for(int i = 1 ; i <= 1666 ; i++ ){
-        if(i%3 != 0)
+   int x,count=0,sum=0;
+   cin >> x;
+   int s1[x];
+
+   for(int i=0;i<x;i++)
+   {
+   	cin >> s1[i];
+   }
+
+   sort(s1,s1+x);
+   for(int i=0;i<x;i++)
+   {
+   	  if(s1[i]!=s1[i+1])
         {
-            if(i%10 != 3){
-                arr[j] = i;
-                j = j + 1;
-            }
+         count++;
+        }
+        else
+        { 
+         sum++;
 
         }
-
-    }
-
-    int t;
-    cin>>t;
-    int k;
-    while(t--){
-        cin>>k;
-        cout<<arr[k]<<endl;
-    }
-
- return 0;
+   }
+   cout << abs(count-sum) << endl;
+   return 0;
 }

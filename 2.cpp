@@ -1,30 +1,29 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int main()
+int32_t main()
 {
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
+    long long sum=0;
+	int x,y;
+	cin >> x >> y;
+	int s1[x];
 
-	int t;
-	cin >> t;
-	int x,y,z,w;
-	while(t--)
+	for(int i=0 ; i < x ; i++)
 	{
-		cin >> x >> y >> z >> w;
-		int m1=max(x,y);
-		int m2=max(z,w);
-		int mi1=min(x,y);
-		int mi2=min(z,w);
-		if(m1>mi2 && m2>mi1 &&(m1>=m2 ||m2>=m1))
-		{
-			cout<<"YES\n";
-		}
-		else
-		{
-			cout<<"NO\n";
-		}
-		m1=0,m2=0,mi1=0,mi2=0;
+		cin >> s1[i];
 	}
+	sort(s1,s1+x);
+	reverse(s1,s1+x);
+	for(int i=0;i<y;i++)
+	{
+		if(s1[i]<0)
+		{
+			break;
+		}
+           sum+=s1[i];
+	}
+	cout<<sum<<endl;
 	return 0;
 }

@@ -1,19 +1,24 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int main()
+int32_t main()
 {
-	ios_base::sync_with_stdio(0);
-	cin.tie(0);
-
-    int t;
-    cin >> t;
-    while(t--)
-    {
-
-	long long int x;
+	int x;
 	cin >> x;
-	cout<<2<<" "<<(x-1)<<endl;
-}
-return 0;
+
+	int s1[x];
+	for(int i=0;i<x;i++)
+	{
+		cin >> s1[i];
+	}
+
+	for(int i=0;i<x/2;i++)
+	{
+           cout<<s1[i]<<" "<<s1[x-1-i]<<" ";
+	}
+	if(x%2!=0)
+	{
+		cout<<s1[x/2]<<" ";
+	}
+	return 0;
 }

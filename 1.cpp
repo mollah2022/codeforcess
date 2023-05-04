@@ -1,34 +1,29 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int main()
+int32_t main()
 {
-	int t,sum=0;
-	cin >> t;
-	while(t--)
-	{
-		int x;
-		cin >> x;
-		int s1[x];
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
 
-		for(int i=0;i<x;i++)
-		{
-			cin >> s1[i];
-             sum+=s1[i];
-		}
-		if(sum==x)
-		{
-			cout<<0<<endl;
-		}
-		else if(sum<x)
-		{
-			cout<<1<<endl;
-		}
-		else
-		{
-			cout<<sum-x<<endl;
-		}
-		sum=0;
+	int x;
+	cin >> x;
+
+	int s1[x];
+	for(int i=0;i<x;i++)
+	{
+		cin >> s1[i];
 	}
-	return 0;
+	for(int i=0;i<x;i++)
+	{
+		if(s1[i] == 0)
+		{
+			reverse(s1,s1+i);
+		}
+	}
+	for(int i=0;i<x;i++)
+	{
+		cout<<s1[i]<<" ";
+	}
+return 0;
 }
