@@ -6,17 +6,46 @@ int32_t main()
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
 
-	string s1;
-	string s2;
+	string s1,s2;
 	cin >> s1 >> s2;
-	cout<<s1.size()<<" "<<s2.size()<<endl;
-    string s3;
-    s3=s1+s2;
-    cout<<s3<<endl;
-    char temp;
-    temp=s1[0];
-    s1[0]=s2[0];
-    s2[0]=temp;
-    cout<<s1<<" "<<s2<<endl;
+
+	int k = s1.size();
+	int p = s2.size();
+
+	int y = min(k,p);
+
+	int c1=0;
+
+	for(int i=0;i<y;i++)
+	{
+		if(s1[i]>s2[i])
+		{
+			cout << s2 << endl;
+			c1=0;
+			break;
+		}
+		else if(s2[i]>s1[i])
+		{
+              cout << s1 << endl;
+              c1=0;
+              break;
+		}
+		else
+		{
+			c1 = -1;
+		}
+	}
+if( c1==-1)
+{
+
+	if(s1>s2)
+	{
+		cout << s2 << endl;
+	}
+	else
+	{
+		cout << s1 << endl;
+	}
+}
 	return 0;
 }
