@@ -5,28 +5,23 @@ int32_t main()
 {
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
+
 	int t; cin >> t;
 	while(t--)
 	{
-		int n; cin >> n;
-		int a1[n];
-		int sum1 = 0,sum2 = 0;
-		for(int i=0;i<n;i++)
+		string s1; cin >> s1;
+		int l = s1.size();
+		int sum1=0,sum2=0;
+		for(int i=0; i<l/2; i++)
 		{
-			cin >> a1[i];
+           sum1+=s1[i];
 		}
-		for(int i=0; i<n;i++)
+		for(int i=l/2; i<l; i++)
 		{
-			if(a1[i]%2==0)
-			{
-				sum1+=a1[i];
-			}
-			else
-			{
-				sum2+=a1[i];
-			}
+           sum2+=s1[i];
 		}
-		if(sum1%2==0 && sum2%2==0)
+
+		if(sum1 == sum2)
 		{
 			cout << "YES\n";
 		}
