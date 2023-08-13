@@ -1,39 +1,38 @@
-#include<bits/stdc++.h>
-using namespace std;
+void solve(){
 
-int32_t main()
-{
-	ios_base::sync_with_stdio(0);
-	cin.tie(0);
-	int t; cin >> t;
-	while(t--)
-	{
-		int n; cin >> n;
-		int a1[n];
-		int sum1 = 0,sum2 = 0;
-		for(int i=0;i<n;i++)
-		{
-			cin >> a1[i];
-		}
-		for(int i=0; i<n;i++)
-		{
-			if(a1[i]%2==0)
-			{
-				sum1+=a1[i];
-			}
-			else
-			{
-				sum2+=a1[i];
-			}
-		}
-		if(sum1%2==0 && sum2%2==0)
-		{
-			cout << "YES\n";
-		}
-		else
-		{
-			cout << "NO\n";
-		}
-	}
-	return 0;
+int n
+
+cin>>n;
+
+vector<int> arr(n); for(int i=0;i<n;i++) cin>>arr[1];
+
+vector<int> b,c;
+
+sort(arr.begin(), arr.end()); if(arr[0]= arr[n-1]) { cout<<-1<<endl;
+
+return;
+
+}
+
+int p = arr[n-1];
+
+int in-1; while(i>=0 && arr[i]==p){
+
+c.push_back(arr[i]);
+
+i--;
+
+} while(i>=0){
+
+b.push_back(arr[i]);
+
+1--; }
+
+cout<<b.size()k" "<<c.size()<<endl; for(auto e:c) cout<<e<<" ";
+
+for(auto e:b) {
+	cout<<e<<" ";
+}
+  cout<<endl;
+
 }
