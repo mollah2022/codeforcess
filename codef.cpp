@@ -40,36 +40,24 @@ int my_rand(int l, int r)
 
 int32_t main(){
     
-    sajib
-    tst{
-      int x,y; cin >> x >> y;
-      string s1; cin >> s1;
-      if(y%2==0){
-         sort(s1.begin(),s1.end());
-         cout << s1 << endl;
-         continue;
-      }
-
-
-      string a = "",b = "";
-      for(int i=0; i<x; i++){
-         if(i%2){
-            b+=s1[i];
-         }
-         else{
-            a+=s1[i];
-         }
-      }
-         sort(a.begin(),a.end());
-         sort(b.begin(),b.end());
-         string s2 = "";
-         for(int i=0; i<a.size(); i++){
-                s2+=a[i];
-                if(i<b.size()){
-                  s2+=b[i];
-                }
-         }
-           cout << s2 << endl;
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int n; cin >> n;
+    int count = 0;
+    vector < int > v1;
+    for(int i=0;i<n; i++){
+      int y; cin >> y;
+      v1.push_back(y);
     }
+    sort(v1.begin(),v1.end());
+    int k = v1[0];
+    int h = v1[n-1];
+    for(int i=0; i<n; i++){
+      if(v1[i+1]-v1[i]!=1){
+          count +=v1[i];
+         break;
+      }
+    }
+  cout << count+1 << endl;
    return 0;
 }

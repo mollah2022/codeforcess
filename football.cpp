@@ -41,35 +41,20 @@ int my_rand(int l, int r)
 int32_t main(){
     
     sajib
-    tst{
-      int x,y; cin >> x >> y;
-      string s1; cin >> s1;
-      if(y%2==0){
-         sort(s1.begin(),s1.end());
-         cout << s1 << endl;
-         continue;
-      }
-
-
-      string a = "",b = "";
-      for(int i=0; i<x; i++){
-         if(i%2){
-            b+=s1[i];
-         }
-         else{
-            a+=s1[i];
-         }
-      }
-         sort(a.begin(),a.end());
-         sort(b.begin(),b.end());
-         string s2 = "";
-         for(int i=0; i<a.size(); i++){
-                s2+=a[i];
-                if(i<b.size()){
-                  s2+=b[i];
-                }
-         }
-           cout << s2 << endl;
-    }
-   return 0;
+     int t,a=0,b=0,c=1,d=0; cin >> t;
+     string s1,s2,s3; cin >> s1;
+     for(int i=0; i<t-1; i++){
+       string s2; cin >> s2;
+       if(s1==s2){
+         c++;
+       }
+       else
+       {
+          d++;
+          s3=s2;
+       }
+     }
+     if(c>d) cout << s1 << endl;
+     else cout << s3 << endl;
+      return 0;
 }

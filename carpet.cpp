@@ -39,37 +39,34 @@ int my_rand(int l, int r)
 }
 
 int32_t main(){
-    
-    sajib
-    tst{
-      int x,y; cin >> x >> y;
-      string s1; cin >> s1;
-      if(y%2==0){
-         sort(s1.begin(),s1.end());
-         cout << s1 << endl;
-         continue;
-      }
-
-
-      string a = "",b = "";
-      for(int i=0; i<x; i++){
-         if(i%2){
-            b+=s1[i];
+      sajib
+      tst{
+         int n,m; cin >> n >> m;
+         char s1[n][m];
+         for(int i=0;i<n;i++){
+            for(int j=0; j<m;j++){
+               cin >> s1[i][j];
+            }
+         }
+         string s = "vika";
+         int sa = 0;
+           for(int j=0;j<m;j++){
+            for(int i=0; i<n;i++){
+              if(s1[i][j]==s[sa]){
+                   sa++;
+                     break;  
+              }
+            }
+         }
+         if(sa==4){
+            cout <<"YES\n";
          }
          else{
-            a+=s1[i];
+            cout << "NO\n";
          }
+         sa=0;
+
       }
-         sort(a.begin(),a.end());
-         sort(b.begin(),b.end());
-         string s2 = "";
-         for(int i=0; i<a.size(); i++){
-                s2+=a[i];
-                if(i<b.size()){
-                  s2+=b[i];
-                }
-         }
-           cout << s2 << endl;
-    }
-   return 0;
-}
+           
+ return 0;
+   }

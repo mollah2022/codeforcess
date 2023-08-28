@@ -40,36 +40,37 @@ int my_rand(int l, int r)
 
 int32_t main(){
     
-    sajib
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
     tst{
-      int x,y; cin >> x >> y;
-      string s1; cin >> s1;
-      if(y%2==0){
-         sort(s1.begin(),s1.end());
-         cout << s1 << endl;
-         continue;
-      }
+        int n; cin >> n;
+        vector < int > v1;
+        for(int i=0; i<n; i++){
+         int y; cin >> y;
+         v1.push_back(y);
+        }
 
+        vector < int > v2;
+        v2.push_back(v1[0]);
 
-      string a = "",b = "";
-      for(int i=0; i<x; i++){
-         if(i%2){
-            b+=s1[i];
-         }
-         else{
-            a+=s1[i];
-         }
-      }
-         sort(a.begin(),a.end());
-         sort(b.begin(),b.end());
-         string s2 = "";
-         for(int i=0; i<a.size(); i++){
-                s2+=a[i];
-                if(i<b.size()){
-                  s2+=b[i];
-                }
-         }
-           cout << s2 << endl;
+        for(int i=1; i<n; i++){
+           if(v1[i] >= v1[i-1]){
+               //v1.push_back(v1[i]-v1[i-1]);
+               v2.push_back(v1[i]);
+           }
+           else{
+              v2.push_back(v1[i]);
+              v2.push_back(v1[i]);
+           }
+        }
+
+        int g = v2.size();
+        cout << g << endl;
+        for(int i=0; i<g; i++){
+           cout << v2[i] <<" ";
+        }
+        cout << endl;
     }
    return 0;
 }
