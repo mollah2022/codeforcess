@@ -38,18 +38,43 @@ int my_rand(int l, int r)
    return uniform_int_distribution<int>(l, r) (rng);
 }
 
-int32_t main(){
-    
-    sajib
-    vector < int > v1;
-    for(int i=0; i<4; i++){
-        int x; cin >> x;
-        v1.push_back(x);
-    }
-    sort(v1.begin(),v1.end());
-    for(int i=0; i<3; i++){
-      cout << v1[3] - v1[i] << " ";
-    }
-    cout << endl;
+void ans1 (int x,int y,int z,string s1){
+
+ if(x==y){
+      cout << "YES\n";
+      return ;
+     }
+     else{
+        ans = y;
+        for(int i=0; i<z; i++){
+         if(s1[i]=='+'){
+            count++;
+            ans++;
+         }
+         else{
+            count--;
+         }
+     }
+  }
+     if(count>=x){
+        cout << "YES\n";
+        return ;
+     }
+      if(ans>=x){
+         cout << "MAYBE\n";
+         return ;
+     }
+       cout << "NO\n";
+
+
+}
+int32_t main(){ 
+  sajib
+  tst{
+     int count=0,ans = 0;
+     int x,y,z; cin >> x >> y >> z;
+     string s1; cin >> s1;
+      ans1(x,y,z,s1);
+  }
    return 0;
 }

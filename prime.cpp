@@ -41,15 +41,23 @@ int my_rand(int l, int r)
 int32_t main(){
     
     sajib
-    vector < int > v1;
-    for(int i=0; i<4; i++){
-        int x; cin >> x;
-        v1.push_back(x);
+    tst{
+      string s1; cin >> s1;
+      int x=-1,y=-1;
+      for(int i=0; i<s1.size(); i++){
+         if(s1[i]=='1'){
+            x=i;
+         }
+         else if(s1[i]=='7'){
+            y=i;
+         }
+      }
+      if(x>y){
+         cout <<"71"<<endl;
+      }
+      else{
+         cout <<"17"<<endl;
+      }
     }
-    sort(v1.begin(),v1.end());
-    for(int i=0; i<3; i++){
-      cout << v1[3] - v1[i] << " ";
-    }
-    cout << endl;
    return 0;
 }

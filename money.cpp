@@ -41,15 +41,19 @@ int my_rand(int l, int r)
 int32_t main(){
     
     sajib
-    vector < int > v1;
-    for(int i=0; i<4; i++){
-        int x; cin >> x;
-        v1.push_back(x);
+    int n; cin >> n;
+    int sum1 = 0,sum2 = 0;
+    if( n>=0 && n%2==0 || n>=0){
+      cout << n << endl;
     }
-    sort(v1.begin(),v1.end());
-    for(int i=0; i<3; i++){
-      cout << v1[3] - v1[i] << " ";
+    else{
+      int x = n;
+         int temp = x%10;
+         sum1+=x/10;
+         sum2+=(((n/10)/10)*10)+temp;
+         //cout << sum1 << " " << sum2 << "";
+        cout << max(sum1,sum2) << endl;
+      
     }
-    cout << endl;
    return 0;
 }
