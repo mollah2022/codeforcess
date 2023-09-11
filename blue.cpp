@@ -40,32 +40,32 @@ int my_rand(int l, int r)
 
 int32_t main(){
     
-   sajib
-   tst{
-      int n; cin >> n;
-      vector < int > v1;
-      for(int i=0;i<n; i++){
-         int y; cin >> y;
-         v1.push_back(y);
+  sajib
+  ll x,y,z; cin >> x >> y >> z;
+  ll a1[x];
+  ll count = 0;
+  for(int i=0; i<x; i++){
+     cin >> a1[i];
+  }
+   if(y==1){
+      for(ll i=0; i<x; i++){
+         count+=a1[i];
       }
-      vector < pair < int, int >> solve;
-      int r = 0;
-      for(int i=0;i<n;i++){
-         int k = i;
-         for(int j=i; j<n; j++){
-            r = r^v1[j];
-            if(r == 0 ){
-               k=j;
-            }
-         }
-         solve.push_back({i,k});
-         i=k+1;
+      cout << count << endl;
+   }
+   else{
+        sort(a1,a1+x);
+      ll ans1 = 0;
+      ll d = (y-1);
+      ll ans = (d*z);
+      //cout << ans << endl;
+      for(int i=0; i<x; i++){
+           ans1+=a1[i];
+           if(ans1==z){
+              break;
+           }
       }
-      cout << solve.size()<< endl;
-      int h = solve.size();
-      for(auto x : solve){
-         cout << x+1 <<" " << x+2 << endl;
-      }
+      cout << ans+ans1 << endl;
    }
    return 0;
 }

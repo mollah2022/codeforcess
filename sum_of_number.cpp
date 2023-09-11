@@ -39,33 +39,41 @@ int my_rand(int l, int r)
 }
 
 int32_t main(){
-    
-   sajib
-   tst{
-      int n; cin >> n;
-      vector < int > v1;
-      for(int i=0;i<n; i++){
-         int y; cin >> y;
-         v1.push_back(y);
-      }
-      vector < pair < int, int >> solve;
-      int r = 0;
-      for(int i=0;i<n;i++){
-         int k = i;
-         for(int j=i; j<n; j++){
-            r = r^v1[j];
-            if(r == 0 ){
-               k=j;
-            }
-         }
-         solve.push_back({i,k});
-         i=k+1;
-      }
-      cout << solve.size()<< endl;
-      int h = solve.size();
-      for(auto x : solve){
-         cout << x+1 <<" " << x+2 << endl;
-      }
-   }
+    sajib
+  int t,n;
+    int aa[100000];
+    cin>>t;
+    while(t--)
+    {
+        int d=0,rem=0;
+        cin>>n;
+        if(n >= 1000){
+            rem=n%1000;
+            aa[d++]=n-rem;
+            n%=1000;
+        }
+        if(n >= 100){
+            rem=n%100;
+            aa[d++]=n-rem;
+            n%=100;
+        }
+        if(n >= 10){
+            rem=n%10;
+            aa[d++]=n-rem;
+            n%=10;
+        }
+        if(n<10 && n>0){
+            aa[d++]=n;
+        }
+        vector<int>va;
+        for(int i=0; i<d; i++){
+            va.push_back(aa[i]);
+        }
+        cout<<va.size()<<endl;
+        for(int i=0; i<va.size(); i++){
+            cout<<va[i]<<" ";
+        }
+        cout<<endl;
+    }
    return 0;
 }

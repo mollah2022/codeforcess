@@ -39,33 +39,34 @@ int my_rand(int l, int r)
 }
 
 int32_t main(){
-    
    sajib
-   tst{
-      int n; cin >> n;
-      vector < int > v1;
-      for(int i=0;i<n; i++){
-         int y; cin >> y;
-         v1.push_back(y);
-      }
-      vector < pair < int, int >> solve;
-      int r = 0;
-      for(int i=0;i<n;i++){
-         int k = i;
-         for(int j=i; j<n; j++){
-            r = r^v1[j];
-            if(r == 0 ){
-               k=j;
+    ll n,i;
+    while(cin>>n)
+    {
+        ll a[n+2];
+        for(i=1;i<=n;i++)
+            cin>>a[i];
+        ll left=1,right=n,sum1=0,sum2=0;
+        i=1;
+        while(left<=right)
+        {
+            if(i%2==1)
+            {
+                if(a[left]>=a[right])
+                    sum1+=a[left++];
+                else
+                    sum1+=a[right--];
             }
-         }
-         solve.push_back({i,k});
-         i=k+1;
-      }
-      cout << solve.size()<< endl;
-      int h = solve.size();
-      for(auto x : solve){
-         cout << x+1 <<" " << x+2 << endl;
-      }
-   }
+            else
+            {
+                if(a[left]>=a[right])
+                    sum2+=a[left++];
+                else
+                    sum2+=a[right--];
+            }
+            i++;
+        }
+        cout<<sum1<<" "<<sum2<<endl;
+    }
    return 0;
 }

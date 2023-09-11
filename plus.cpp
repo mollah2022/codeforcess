@@ -42,30 +42,25 @@ int32_t main(){
     
    sajib
    tst{
+      int count = 0;
       int n; cin >> n;
-      vector < int > v1;
-      for(int i=0;i<n; i++){
-         int y; cin >> y;
-         v1.push_back(y);
+      int a1[n];
+      for(int i=0; i<n; i++){
+         cin >> a1[i];
       }
-      vector < pair < int, int >> solve;
-      int r = 0;
-      for(int i=0;i<n;i++){
-         int k = i;
-         for(int j=i; j<n; j++){
-            r = r^v1[j];
-            if(r == 0 ){
-               k=j;
-            }
-         }
-         solve.push_back({i,k});
-         i=k+1;
+      int mx = a1[0];
+      int mn = a1[0];
+      for(int i=0; i<n; i++){
+           if(mx < a1[i])
+            mx = a1[i];
+         if(mn > a1[i])
+            mn = a1[i];
       }
-      cout << solve.size()<< endl;
-      int h = solve.size();
-      for(auto x : solve){
-         cout << x+1 <<" " << x+2 << endl;
+      for(int i=mn; i<mx; i++){
+         count++;
       }
+      cout << count << endl;
+      count  = 0;
    }
    return 0;
 }
