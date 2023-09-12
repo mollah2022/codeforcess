@@ -43,26 +43,14 @@ int32_t main(){
    sajib
    tst{
       int n; cin >> n;
-      vector < pair < int, int > > v1;
-      int y;
-      for(int i=0;i<n; i++){
-         cin >> y;
-         v1.push_back({y,i});
-      }
-
-      sort(v1.begin(),v1.end());
-      int k = n;
-      for(int i=0; i<n; i++){
-         v1[i].first = k;
-         k--;
-      }
-      int solve[n];
-      for(int i=0;i<n; i++){
-         solve[v1[i].second] = v1[i].first;
-      }
-      for(int i=0;i<n; i++)
-         cout << solve[i] <<" ";
-          cout << endl;
+      string s1; cin >> s1;
+      sort(s1.begin(),s1.end());
+      string s2 = "Timru";
+     // cout << s1 << endl;
+      if(s1 == s2)
+         yes
+      else
+         no
    }
    return 0;
 }

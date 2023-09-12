@@ -40,29 +40,20 @@ int my_rand(int l, int r)
 
 int32_t main(){
     
-   sajib
-   tst{
-      int n; cin >> n;
-      vector < pair < int, int > > v1;
-      int y;
-      for(int i=0;i<n; i++){
-         cin >> y;
-         v1.push_back({y,i});
+    sajib
+    tst{
+      ll n, count=0, start;
+      cin >> n;
+      for(int i=1; i<=9; i++)
+      {
+         start=i;
+         while(start<=n)
+         {
+            count++;
+            start=start*10+i;
+         }
       }
-
-      sort(v1.begin(),v1.end());
-      int k = n;
-      for(int i=0; i<n; i++){
-         v1[i].first = k;
-         k--;
-      }
-      int solve[n];
-      for(int i=0;i<n; i++){
-         solve[v1[i].second] = v1[i].first;
-      }
-      for(int i=0;i<n; i++)
-         cout << solve[i] <<" ";
-          cout << endl;
-   }
+      cout << count << endl;
+    }
    return 0;
 }

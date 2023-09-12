@@ -41,28 +41,21 @@ int my_rand(int l, int r)
 int32_t main(){
     
    sajib
-   tst{
-      int n; cin >> n;
-      vector < pair < int, int > > v1;
-      int y;
-      for(int i=0;i<n; i++){
-         cin >> y;
-         v1.push_back({y,i});
-      }
-
-      sort(v1.begin(),v1.end());
-      int k = n;
-      for(int i=0; i<n; i++){
-         v1[i].first = k;
-         k--;
-      }
-      int solve[n];
-      for(int i=0;i<n; i++){
-         solve[v1[i].second] = v1[i].first;
-      }
-      for(int i=0;i<n; i++)
-         cout << solve[i] <<" ";
-          cout << endl;
-   }
+    int n, m, f[1000];
+    cin >> n >> m;
+    for (int i = 0; i < m; ++i)
+    {
+        cin >> f[i];
+    }
+    sort(f, f + m);
+    int least = f[n-1] - f[0];
+    for (int i = 1; i <= m - n; ++i)
+    {
+        if (f[i+n-1] - f[i] < least)
+        {
+            least = f[i+n-1] - f[i];
+        }
+    }
+    cout << least << endl;
    return 0;
 }

@@ -42,27 +42,15 @@ int32_t main(){
     
    sajib
    tst{
-      int n; cin >> n;
-      vector < pair < int, int > > v1;
-      int y;
-      for(int i=0;i<n; i++){
-         cin >> y;
-         v1.push_back({y,i});
+      ll a,b,c,d;cin >> a >> b >> c >> d;
+      ll sum = 0;
+      sum  = (a+b+c+d);
+      if(sum%3!=0 || sum/3<a || sum/3<b || sum/3<c){
+         no
       }
-
-      sort(v1.begin(),v1.end());
-      int k = n;
-      for(int i=0; i<n; i++){
-         v1[i].first = k;
-         k--;
+      else{
+         yes
       }
-      int solve[n];
-      for(int i=0;i<n; i++){
-         solve[v1[i].second] = v1[i].first;
-      }
-      for(int i=0;i<n; i++)
-         cout << solve[i] <<" ";
-          cout << endl;
    }
    return 0;
 }
