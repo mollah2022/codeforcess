@@ -40,24 +40,17 @@ int my_rand(int l, int r)
 
 int32_t main(){
     
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    tst{
-         int n; cin >> n;
-         int a1[n];
-         for(int i=0; i<n; i++){
-            cin >> a1[i];
-         }
-         int y; cin >> y;
-         sort(a1,a1+n);
-         for(int i=0;i<n;i++){
-            for(int j=i+1;j<n;j++){
-                if(a1[i]+a1[j] == y){
-                    cout << a1[i] << " " <<a1[j] << endl;
-                    break;
-                }
-            }
-         }
+    sajib
+    string s1; cin >> s1;
+     char first = 'a';
+     ll ans = 0;
+    for(int i=0;i<s1.size();i++){
+         ll a = abs(s1[i]-first);
+         ll b = 26-a;
+         ans+=min(a,b);
+         first = s1[i];
     }
-   return 0;
+    cout << ans << endl;
+
+       return 0;
 }

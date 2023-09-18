@@ -40,36 +40,251 @@ int my_rand(int l, int r)
 
 int32_t main(){
     
-    sajib
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     tst{
-      int x,y; cin >> x >> y;
       string s1; cin >> s1;
-      if(y%2==0){
-         sort(s1.begin(),s1.end());
-         cout << s1 << endl;
-         continue;
+      sort(s1.begin(),s1.end());
+      int counta=0,countb=0,countc=0,countd=0,counte=0,countf=0,countg=0,counth=0,counti=0,countj=0,countk=0,countl=0,countm=0,countn=0,counto=0,countp=0,countq=0,countr=0,counts=0,countt=0,countu=0,countv=0,countw=0,countx=0,county=0,countz=0;
+      for(int i=0;i<s1.size();i++){
+
+         if(s1[i]=='A'){
+             counta++;
+         }
+         else if(s1[i]=='B'){
+           countb++;
+         }
+           else if(s1[i]=='C'){
+            countc++;
+         }
+           else if(s1[i]=='D'){
+            countd++;
+         }
+           else if(s1[i]=='E'){
+            counte++;
+         }
+           else if(s1[i]=='F'){
+            countf++;
+         }
+           else if(s1[i]=='G'){
+            countg++;
+         }
+           else if(s1[i]=='H'){
+            counth++;
+         }
+           else if(s1[i]=='I'){
+            counti++;
+         }
+           else if(s1[i]=='J'){
+            countj++;
+         }
+           else if(s1[i]=='K'){
+            countk++;
+         }
+           else if(s1[i]=='L'){
+            countl++;
+         }
+           else if(s1[i]=='M'){
+            countm++;
+         }
+           else if(s1[i]=='N'){
+            countn++;
+         }
+           else if(s1[i]=='O'){
+            counto++;
+         }
+           else if(s1[i]=='P'){
+            countp++;
+         }
+           else if(s1[i]=='Q'){
+            countq++;
+         }
+           else if(s1[i]=='R'){
+            countr++;
+         }
+           else if(s1[i]=='S'){
+            counts++;
+         }
+           else if(s1[i]=='T'){
+            countt++;
+         }
+           else if(s1[i]=='U'){
+            countu++;
+         }
+           else if(s1[i]=='V'){
+            countv++;
+         }
+           else if(s1[i]=='W'){
+            countw++;
+         }
+           else if(s1[i]=='X'){
+            countx++;
+         }
+           else if(s1[i]=='Y'){
+            county++;
+         }
+           else if(s1[i]=='Z'){
+            countz++;
+         }
+
+      }
+      if(counta==1){
+         cout<<"A";
+      }
+      else{
+         cout<<"A"<<counta;
+      }
+       if(countb==1){
+         cout<<"B";
+      }
+      else{
+         cout<<"B"<<countb;
+      }
+       if(countc==1){
+         cout<<"C";
+      }
+      else{
+         cout<<"C"<<countc;
+      }
+       if(countd==1){
+         cout<<"D";
+      }
+      else{
+         cout<<"D"<<countd;
+      }
+       if(counte==1){
+         cout<<"E";
+      }
+      else{
+         cout<<"E"<<counte;
+      }
+       if(countf==1){
+         cout<<"F";
+      }
+      else{
+         cout<<"F"<<countf;
+      }
+       if(countg==1){
+         cout<<"G";
+      }
+      else{
+         cout<<"G"<<countg;
+      }
+       if(counth==1){
+         cout<<"H";
+      }
+      else{
+         cout<<"H"<<counth;
+      }
+       if(counti==1){
+         cout<<"I";
+      }
+      else{
+         cout<<"I"<<counti;
+      }
+       if(countj==1){
+         cout<<"J";
+      }
+      else{
+         cout<<"J"<<countj;
+      }
+       if(countk==1){
+         cout<<"K";
+      }
+      else{
+         cout<<"K"<<countk;
+      }
+       if(countl==1){
+         cout<<"L";
+      }
+      else{
+         cout<<"L"<<countl;
+      }
+       if(countm==1){
+         cout<<"M";
+      }
+      else{
+         cout<<"M"<<countm;
+      }
+       if(countn==1){
+         cout<<"N";
+      }
+      else{
+         cout<<"N"<<countn;
+      }
+       if(counto==1){
+         cout<<"O";
+      }
+      else{
+         cout<<"O"<<counto;
+      }
+       if(countp==1){
+         cout<<"P";
+      }
+      else{
+         cout<<"P"<<countp;
+      }
+       if(countq==1){
+         cout<<"Q";
+      }
+      else{
+         cout<<"Q"<<countq;
+      }
+       if(countr==1){
+         cout<<"R";
+      }
+      else{
+         cout<<"R"<<countr;
+      }
+       if(counts==1){
+         cout<<"S";
+      }
+      else{
+         cout<<"S"<<counts;
+      }
+       if(countt==1){
+         cout<<"T";
+      }
+      else{
+         cout<<"T"<<countt;
+      }
+       if(countu==1){
+         cout<<"U";
+      }
+      else{
+         cout<<"U"<<countu;
+      }
+       if(countv==1){
+         cout<<"V";
+      }
+      else{
+         cout<<"V"<<countv;
+      }
+       if(countw==1){
+         cout<<"W";
+      }
+      else{
+         cout<<"W"<<countw;
+      }
+       if(countx==1){
+         cout<<"X";
+      }
+      else{
+         cout<<"X"<<countx;
+      }
+       if(county==1){
+         cout<<"Y";
+      }
+      else{
+         cout<<"Y"<<county;
+      }
+       if(countz==1){
+         cout<<"Z";
+      }
+      else{
+         cout<<"Z"<<countz;
       }
 
-
-      string a = "",b = "";
-      for(int i=0; i<x; i++){
-         if(i%2){
-            b+=s1[i];
-         }
-         else{
-            a+=s1[i];
-         }
-      }
-         sort(a.begin(),a.end());
-         sort(b.begin(),b.end());
-         string s2 = "";
-         for(int i=0; i<a.size(); i++){
-                s2+=a[i];
-                if(i<b.size()){
-                  s2+=b[i];
-                }
-         }
-           cout << s2 << endl;
     }
    return 0;
 }

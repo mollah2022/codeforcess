@@ -42,22 +42,26 @@ int32_t main(){
     
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    tst{
-         int n; cin >> n;
-         int a1[n];
-         for(int i=0; i<n; i++){
-            cin >> a1[i];
-         }
-         int y; cin >> y;
-         sort(a1,a1+n);
-         for(int i=0;i<n;i++){
-            for(int j=i+1;j<n;j++){
-                if(a1[i]+a1[j] == y){
-                    cout << a1[i] << " " <<a1[j] << endl;
-                    break;
-                }
-            }
-         }
+    int found = 0;
+    int n,m; cin >> n >> m;
+    char s1[n][m];
+    for(int i=0;i<n;i++){
+      for(int j=0;j<m;j++){
+         cin >> s1[i][j];
+      }
     }
+     for(int i=0;i<n;i++){
+      for(int j=0;j<m;j++){
+        if( s1[i][j]=='C' || s1[i][j]=='M' || s1[i][j]=='Y'){
+         found = 1;
+         break;
+        }
+      }
+    }
+    if(found == 0)
+      cout << "#Black&White\n";
+   else if(found == 1)
+      cout <<"#Color\n";
+
    return 0;
 }
