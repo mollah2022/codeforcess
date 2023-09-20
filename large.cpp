@@ -40,20 +40,20 @@ int my_rand(int l, int r)
 
 int32_t main(){
     
-      sajib
-        tst{
-         ll a,b,c; cin >> a >> b >> c;
-           double x,y;
-           x = ceil((double)a/b);
-           y = ceil((double)a/c);
-           if(x==y){
-              cout << -1 << endl;
-           }
-           else {
-            y = y+1;
-               cout << x-y << endl;
-           }
-
-        }
+    sajib
+    int t; cin >> t;
+    for(int i=1;i<=t;i++){
+    vector < int > v1;
+    for(int i=0;i<3;i++){
+      int y; cin >> y;
+      v1.push_back(y);
+    }
+    sort(v1.begin(),v1.end());
+     cout << "Case " << i <<": " ;
+    for(int i=0;i<3;i++){
+     cout << v1[i] <<" ";
+    }
+    cout << endl;
+ }
    return 0;
 }

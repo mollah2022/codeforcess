@@ -40,12 +40,9 @@ int my_rand(int l, int r)
 
 int32_t main(){
     
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    int n; cin >> n;
-    if(n<100)
-      yes
-   else
-      no
+      sajib
+      ll a,b; cin >> a >> b;
+      ll sum = (a+b);
+      cout << sum << 1 << endl;
    return 0;
 }

@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+ #include<bits/stdc++.h>
 #define ll long long
 #define pb push_back
 #define vc vector
@@ -41,19 +41,13 @@ int my_rand(int l, int r)
 int32_t main(){
     
       sajib
-        tst{
-         ll a,b,c; cin >> a >> b >> c;
-           double x,y;
-           x = ceil((double)a/b);
-           y = ceil((double)a/c);
-           if(x==y){
-              cout << -1 << endl;
-           }
-           else {
-            y = y+1;
-               cout << x-y << endl;
-           }
-
-        }
+       tst{
+           string s;
+           string p = "314159265358979323846264338327";
+    cin>>s;
+    int i = 0;
+    while(i < s.size() && i < p.size() && s[i] == p[i]) i++;
+    cout<<i<<endl;
+       }
    return 0;
 }

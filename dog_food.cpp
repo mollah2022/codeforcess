@@ -41,19 +41,47 @@ int my_rand(int l, int r)
 int32_t main(){
     
       sajib
-        tst{
-         ll a,b,c; cin >> a >> b >> c;
-           double x,y;
-           x = ceil((double)a/b);
-           y = ceil((double)a/c);
-           if(x==y){
-              cout << -1 << endl;
+      tst{
+         ll a,b,c,x,y;cin >> a >> b >> c >> x >> y;
+           ll ans1=0,ans2=0,ans3=0,ans4=0;
+
+        if(a>=x && b>=y){
+         yes
+        }
+        else if(a<x && b<y){
+           ans1= (x-a);
+           ans2= (y-b);
+           if((ans1+ans2)<=c){
+            yes
            }
-           else {
-            y = y+1;
-               cout << x-y << endl;
+           else{
+            no
            }
+        }
+        else if(a<x && b>=y){
+         ans3 = (x-a);
+         if(ans3<=c){
+            yes
+         }
+         else{
+            no
+         }
 
         }
+        else if(a>=x && b<y){
+           ans4= (y-b);
+           if(ans4<=c){
+            yes
+           }
+           else{
+            no
+           }
+        }
+        else{
+         no
+        }
+
+
+    }
    return 0;
 }

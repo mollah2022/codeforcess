@@ -37,23 +37,27 @@ int my_rand(int l, int r)
 {
    return uniform_int_distribution<int>(l, r) (rng);
 }
-
+ 
 int32_t main(){
     
       sajib
-        tst{
-         ll a,b,c; cin >> a >> b >> c;
-           double x,y;
-           x = ceil((double)a/b);
-           y = ceil((double)a/c);
-           if(x==y){
-              cout << -1 << endl;
-           }
-           else {
-            y = y+1;
-               cout << x-y << endl;
-           }
-
-        }
+            tst{
+               int a,b,c; cin >> a >> b >> c;
+               int mx = max({a,b,c});
+               if(a==0 && b==0 && c==0){
+                  cout << 1 <<" "<< 1 <<" " << 1 << endl;
+               }
+               else{
+                    if(mx==a){
+                          cout << mx-a << " " << (mx-b)+1 <<" "<<(mx-c)+1<<endl;
+                    }
+                    else if(mx == b){
+                     cout << (mx-a)+1 << " " << (mx-b) <<" "<<(mx-c)+1<<endl;
+                    }
+                    else if(mx == c){
+                       cout << (mx-a)+1 << " " << (mx-b)+1 <<" "<<(mx-c)<<endl;
+                    }
+               }
+            }
    return 0;
 }

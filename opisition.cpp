@@ -40,20 +40,21 @@ int my_rand(int l, int r)
 
 int32_t main(){
     
-      sajib
+        sajib
         tst{
-         ll a,b,c; cin >> a >> b >> c;
-           double x,y;
-           x = ceil((double)a/b);
-           y = ceil((double)a/c);
-           if(x==y){
-              cout << -1 << endl;
-           }
-           else {
-            y = y+1;
-               cout << x-y << endl;
-           }
-
+             ll a,b,c; cin >> a >> b >> c;
+             ll diff = abs(a-b);
+             ll value = 2*diff;
+             if(a>value || b>value || c> value){
+               cout << -1 << endl;
+             }
+             else{
+                    ll d = c+diff;
+                    if(d>value){
+                       d = c- diff;
+                    }
+                    cout << d << endl;
+             }
         }
    return 0;
 }
