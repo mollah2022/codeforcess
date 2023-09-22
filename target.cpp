@@ -42,17 +42,32 @@ int32_t main(){
     
       sajib
       tst{
-         string s1; cin >> s1;
-         for(int i=0;i<s1.size();i++){
-            if(s1[i]=='b' && s1[i+1]=='c'&& s1[i+2]=='a' ||s1[i]=='c' && s1[i+1]=='a'&& s1[i+2]=='b'){
-               no
-               break;
+        
+            int n=10,m=10;
+            char a[n][m];
+            int sum=0;
+            for(int i=0;i<n;i++){
+               for(int j=0;j<m;j++){
+                  cin >> a[i][j];
+               }
             }
-            else{
-               yes
-               break;
-            }
+             for(int i=0;i<n;i++){
+               for(int j=0;j<m;j++){
+                  if(a[i][j]=='X'){
+                     if(i == 0 || j==0 || i == 9 || j == 9)
+               sum+=1;
+            else if(i == 1 || j==1 || i == 8 || j == 8)
+               sum+=2;
+            else if(i == 2 || j==2 || i == 7 || j == 7)
+               sum+=3;
+            else if(i == 3 || j==3 || i == 6 || j == 6)
+               sum+=4;
+            else if(i == 4 || j==4 || i == 5 || j == 5)
+               sum+=5;
+               }
+            } 
          }
-      }
+             cout << sum << endl;
+       }
    return 0;
 }

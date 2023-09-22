@@ -41,18 +41,33 @@ int my_rand(int l, int r)
 int32_t main(){
     
       sajib
-      tst{
-         string s1; cin >> s1;
-         for(int i=0;i<s1.size();i++){
-            if(s1[i]=='b' && s1[i+1]=='c'&& s1[i+2]=='a' ||s1[i]=='c' && s1[i+1]=='a'&& s1[i+2]=='b'){
-               no
-               break;
+        tst{
+            string s1,s2; cin >> s1 >> s2;
+            sort(s1.begin(),s1.end());
+            sort(s2.begin(),s2.end());
+            int a = s1.size();
+            int b = s2.size();
+            if(s1[0]=='S' && s2[0]=='M' || s1[0]=='S' && s2[0]=='L'|| s1[0]=='M' && s2[0]=='L' ){
+               cout << "<\n";
+            }
+            else if(s1[0]=='M' && s2[0]=='S' || s1[0]=='L' && s2[0]=='S'|| s1[0]=='L' && s2[0]=='M' ) {
+                 cout << ">\n";
+            }
+            else if(s1[0]=='S' && s2[0]=='S' && a>b){
+                 cout << "<\n";
+            }
+            else if(s1[0]=='S' && s2[0]=='S' && a<b){
+                   cout << ">\n";
+            }
+            else if(s1[0]=='L' && s2[0]=='L' && a>b) {
+                 cout << ">\n";
+            }
+            else if(s1[0]=='L' && s2[0]=='L' && a<b){
+                    cout << "<\n";
             }
             else{
-               yes
-               break;
+               cout <<"=\n";
             }
          }
-      }
    return 0;
 }

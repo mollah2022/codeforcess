@@ -38,21 +38,42 @@ int my_rand(int l, int r)
    return uniform_int_distribution<int>(l, r) (rng);
 }
 
-int32_t main(){
-    
-      sajib
-      tst{
-         string s1; cin >> s1;
-         for(int i=0;i<s1.size();i++){
-            if(s1[i]=='b' && s1[i+1]=='c'&& s1[i+2]=='a' ||s1[i]=='c' && s1[i+1]=='a'&& s1[i+2]=='b'){
-               no
-               break;
+using namespace std;
+int32_t main()
+{
+    int t;
+    int c,pos,pos2,i;
+    cin>>t;
+    string s,a;
+    while(t--)
+    {
+        c=0,pos=0,pos2=0;
+        cin>>s;
+        for(i=0; i<s.length(); i++)
+        {
+            if(s[i]=='1')
+            {
+                //a+='1';
+                pos=i;
+                break;
             }
-            else{
-               yes
-               break;
+        }
+        for(i=s.length(); i>=pos; i--)
+        {
+            if(s[i]=='1')
+            {
+                pos2=i;
+                break;
             }
-         }
-      }
-   return 0;
+        }
+        for(i=pos; i<pos2; i++)
+        {
+            if(s[i]=='0')
+                c++;
+          //  else
+               // a+='1';
+        }
+        //cout<<a<<endl;
+        cout<<c<<endl;
+    }
 }

@@ -41,18 +41,15 @@ int my_rand(int l, int r)
 int32_t main(){
     
       sajib
-      tst{
-         string s1; cin >> s1;
-         for(int i=0;i<s1.size();i++){
-            if(s1[i]=='b' && s1[i+1]=='c'&& s1[i+2]=='a' ||s1[i]=='c' && s1[i+1]=='a'&& s1[i+2]=='b'){
-               no
-               break;
-            }
-            else{
-               yes
-               break;
-            }
+         tst{
+            int a,b; cin >> a >> b;
+            string s1; cin >> s1;
+            int count = 0;
+               for(int i=0;i<s1.size();i++){
+                    if(s1[i]=='B'){count++; i+=b-1;}
+               }
+            cout << count << endl;
+            count = 0;
          }
-      }
    return 0;
 }

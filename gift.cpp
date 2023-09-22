@@ -42,17 +42,18 @@ int32_t main(){
     
       sajib
       tst{
-         string s1; cin >> s1;
-         for(int i=0;i<s1.size();i++){
-            if(s1[i]=='b' && s1[i+1]=='c'&& s1[i+2]=='a' ||s1[i]=='c' && s1[i+1]=='a'&& s1[i+2]=='b'){
-               no
-               break;
-            }
-            else{
-               yes
-               break;
-            }
+         int n; cin >> n;
+         int a1[n];
+         for(int i=0;i<n;i++){
+            cin >> a1[i];
          }
+         sort(a1,a1+n);
+         a1[0] = a1[0]+1;
+         int ans = 1;
+         for(int i=0;i<n;i++){
+            ans*=a1[i];
+         }
+         cout << ans << endl;
       }
    return 0;
 }
