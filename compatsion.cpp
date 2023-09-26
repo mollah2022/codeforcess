@@ -40,21 +40,22 @@ int my_rand(int l, int r)
 
 int32_t main(){
     
-      sajib
-         tst{
-            ll n ; cin >> n;
-             set < ll > sa;
-             int i = 1;
-             while(i*i<=n){
-                  sa.insert(i*i);
-                  i++;
-             }
-                  i = 1;
-             while(i*i*i<=n){
-                  sa.insert(i*i*i);
-                  i++;
-             }
-             cout << sa.size()<<endl;
+    sajib
+    tst{
+      int n,a,b,c,d,r=1; cin >> n >> a >> b;
+      n--;
+      while(n--){
+         cin >> c >> d;
+         if(c>=a && d>=b){
+            r=0;
          }
-   return 0;
+      }
+      if(r==1){
+         cout << a << endl;
+      }
+      else{
+         cout << -1 << endl;
+      }
+    }
+    return 0;
 }

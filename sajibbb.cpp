@@ -42,19 +42,21 @@ int32_t main(){
     
       sajib
          tst{
-            ll n ; cin >> n;
-             set < ll > sa;
-             int i = 1;
-             while(i*i<=n){
-                  sa.insert(i*i);
-                  i++;
-             }
-                  i = 1;
-             while(i*i*i<=n){
-                  sa.insert(i*i*i);
-                  i++;
-             }
-             cout << sa.size()<<endl;
+            int a,b; cin >> a >> b;
+            int a1[a];
+            int count = 0;
+            for(int i=0;i<a;i++){
+               cin >> a1[i];
+            }
+            for(int i=0;i<a;i++){
+               if(a1[i]==b){
+                  count++;
+               }
+            }
+            if(count > 0)
+               yes
+            else
+               no
          }
    return 0;
 }

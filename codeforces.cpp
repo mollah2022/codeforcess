@@ -40,16 +40,17 @@ int my_rand(int l, int r)
 
 int32_t main(){
     
-    sajib
-    vector < int > v1;
-    for(int i=0; i<4; i++){
-        int x; cin >> x;
-        v1.push_back(x);
-    }
-    sort(v1.begin(),v1.end());
-    for(int i=0; i<3; i++){
-      cout << v1[3] - v1[i] << " ";
-    }
-    cout << endl;
+      sajib
+      tst{
+         ll n,k,x; cin >> n >> k >> x;
+         ll sum1 = (k*(k+1)/2);
+         ll sum2 = ((n-k+1+n)*k/2);
+         if( sum1 > x || sum2 < x){
+            no
+         }
+         else{
+            yes
+         }
+      }
    return 0;
 }

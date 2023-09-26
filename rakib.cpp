@@ -42,19 +42,16 @@ int32_t main(){
     
       sajib
          tst{
-            ll n ; cin >> n;
-             set < ll > sa;
-             int i = 1;
-             while(i*i<=n){
-                  sa.insert(i*i);
-                  i++;
+             int n; cin >> n;
+             int ans = 1;
+             for(int i=1;i<=n;i++){
+                  cout << ans;
+                  if(i!=n){
+                     cout << " ";
+                     ans+=2;
+                  }
              }
-                  i = 1;
-             while(i*i*i<=n){
-                  sa.insert(i*i*i);
-                  i++;
-             }
-             cout << sa.size()<<endl;
+              cout << endl;
          }
    return 0;
 }

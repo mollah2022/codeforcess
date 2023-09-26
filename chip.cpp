@@ -36,25 +36,52 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 int my_rand(int l, int r)
 {
    return uniform_int_distribution<int>(l, r) (rng);
-}
-
+} 
 int32_t main(){
-    
-      sajib
-         tst{
-            ll n ; cin >> n;
-             set < ll > sa;
-             int i = 1;
-             while(i*i<=n){
-                  sa.insert(i*i);
-                  i++;
-             }
-                  i = 1;
-             while(i*i*i<=n){
-                  sa.insert(i*i*i);
-                  i++;
-             }
-             cout << sa.size()<<endl;
-         }
-   return 0;
+   int t;
+   cin>>t;
+ 
+   while(t--){
+        int n;
+      long long sum1=0,sum2=0,min1,min2;
+      cin>>n;
+      long long ar1[n],ar2[n];
+      cin>>ar1[0];
+      min1=ar1[0];
+ 
+     for(int i =1;i<n;i++){
+        cin>>ar1[i];
+        if(ar1[i]<min1){
+            min1 = ar1[i];
+        }
+     }
+ 
+     cin>>ar2[0];
+      min2=ar2[0];
+ 
+     for(int i =1;i<n;i++){
+        cin>>ar2[i];
+        if(ar2[i]<min2){
+            min2 = ar2[i];
+        }
+     }
+ 
+     for(int i=0;i<n;i++){
+        sum1 += (min2+ar1[i]);
+        sum2 += (min1+ar2[i]);
+ 
+     }
+ 
+     if(sum1>sum2){
+        cout<<sum2<<endl;
+     }else{
+        cout<<sum1<<endl;
+     }
+ 
+ 
+   }
+ 
+ 
+ 
+  return 0;
 }
