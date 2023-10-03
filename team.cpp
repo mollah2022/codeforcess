@@ -41,27 +41,27 @@ int my_rand(int l, int r)
 int32_t main(){
     
       sajib
-      int result = 0;
-        int a,b; cin >> a >> b;
-                    for(int i=a+1;i<=50;i++){
-                        int isprime = 0;
-                       for(int j=2;j<i;j++){
-                           if(i%j==0){
-                               isprime = 1;
-                               break;
-                           }
-                       }
-                       if(isprime == 0){
-                           result = i;
-                           break;
-                       }
-                    }
-                   // cout << v1[0] << endl;
-                    if( result == b){
-                        yes
-                    }
-                    else{
-                     no
-                    }
+         int n; cin >> n;
+         vector < int > v1,v2,v3;
+         int a1[n],mn = 0;
+         int one = 0,two = 0,three = 0;
+         for(int i=1;i<=n;i++) cin >>a1[i];
+            for(int i=1;i<=n;i++){
+               if(a1[i]==1) {one++;}
+               else if(a1[i]==2){ two++;}
+               else {three++;}
+            }
+           if(one!=0 && two!=0 && three!=0){ mn = min ({one,two,three});}
+            cout << mn << endl;
+              for(int i=1;i<=n;i++){
+               if(a1[i]==1) {v1.push_back(i);}
+               else if(a1[i]==2){ v2.push_back(i);}
+               else {v3.push_back(i);}
+            }
+            for(int i=0;i<mn;i++){
+               cout << v1[i] <<" " << v2[i] << " " << v3[i] << endl;
+            }
+
+
    return 0;
 }

@@ -41,27 +41,16 @@ int my_rand(int l, int r)
 int32_t main(){
     
       sajib
-      int result = 0;
         int a,b; cin >> a >> b;
-                    for(int i=a+1;i<=50;i++){
-                        int isprime = 0;
-                       for(int j=2;j<i;j++){
-                           if(i%j==0){
-                               isprime = 1;
-                               break;
-                           }
-                       }
-                       if(isprime == 0){
-                           result = i;
-                           break;
-                       }
-                    }
-                   // cout << v1[0] << endl;
-                    if( result == b){
-                        yes
-                    }
-                    else{
-                     no
-                    }
+           double ans  = (double)b/a;
+           if(ans == 1){
+               cout << "1/1" << endl;
+           }
+           else if(ans>=0.5 && ans <1){
+               cout << "1/2" << endl;
+           }
+           else{
+              cout << "0/1" << endl;
+           }
    return 0;
 }
