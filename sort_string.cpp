@@ -1,26 +1,20 @@
 #include<bits/stdc++.h>
+#define ll long long
+#define sajib ios_base::sync_with_stdio(0); cin.tie(0);
 using namespace std;
-
-int32_t main()
-{
-	long long int x;
-	cin >> x;
-	string s1,s2 = "";
-	cin >> s1;
-    for(int i=0;i<s1.size()-1;i++)
-    {
-    	for(int j=i+1;j<s1.size()-1-i;j++)
-    	{
-    		if(s1[j]>s1[j])
-    	{
-    		char temp = s1[i];
-    		s1[i] = s1[i+1];
-    		s1[i+1] = temp;
-    	}
-         s2+=s1[i];
-    	}
-    }
-
-    cout << s2 << endl;
+int main(){
+	     sajib 
+	       int n; cin >> n;
+	          while(n--){
+	          	  string s1,s2; cin >> s1;
+	          	  for(int i=0;i<s1.size();i++){
+	          	  	   if(i%2==0){
+	          	  	   	  s2+=s1[i];
+	          	  	   }
+	          	  }
+	          	  int l = s1.size();
+	          	  s2+=s1[l-1];
+	          	  cout << s2 << endl;
+	          }
 	return 0;
 }
