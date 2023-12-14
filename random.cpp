@@ -1,66 +1,47 @@
 #include<bits/stdc++.h>
 #define ll long long
-#define pb push_back
-#define vc vector
-#define vi vc<int>
-#define vl vc<ll>
-#define mp(x,y) make_pair(x,y)
-#define yes cout<<"YES"<<'\n';
-#define no cout<<"NO"<<'\n';
-#define tst int t;cin>>t;while(t--)
-#define srt(v) sort(v.begin(),v.end());
-#define rsrt(v) sort(v.rbegin(),v.rend());
-#define sajib ios::sync_with_stdio(false);cin.tie(0);
-#define rvs(v) reverse(v.begin(),v.end());
-#define F first
-#define S second
-#define MOD 1000000007
-#define gcd(a,b) __gcd(a,b)
-#define lcm(a,b) (a*b)/gcd(a,b)
-#define PI 2*acos(0.0)
-#define pii pair<int,int>
-#define fr(i,a,b) for(int i=a;i<=b;i++)
-#define coutv(v) for(auto it:v)cout<<it<<' ';cout<<endl;
-#define cinv(v) for(auto &it:v)cin>>it;
-#define all(v) v.begin(),v.end()
-#define rall(v) v.rbegin(),v.rend()
-#define ld long double
-#define nl '\n'
-const int N = 1e5;
+#define sajib ios_base::sync_with_stdio(0); cin.tie(0);
 using namespace std;
-#ifndef ONLINE_JUDGE
-#else
-#define dbg(x...)
-#endif
-mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
-int my_rand(int l, int r)
-{
-   return uniform_int_distribution<int>(l, r) (rng);
-}
-
 int32_t main(){
-    
-        sajib
-           int n; cin >> n;
-           int c1=0,c2=0,ans=0;
-           string s1; cin >> s1;
-           for(int i=0;i<n;i++){
-               cin >> s1[i];
-           }
-           for(int i=0;i<n;i++){
-                if(s1[i]=='1'){
-                     c1++;
-                }
-                else{
-                   c2++;
-                }
-           }
-           if(c1!=0 && c2==0 ||c1==0 && c2!=0 ){cout<<n<<endl;}
-          //else if(c1%2==0 && c2%2==0){cout<<0<<endl;}
-           else {
-                   int count = abs(c1-c2);
-                   cout << count << endl;
-           }
+	     sajib
+	        int t; cin >> t;
+	         deque < int > dq;
+	        while(t--){
+	        	   int a,b; cin >> a >> b;
+	        	     deque <int> :: iterator it;
+	        	     if(a==0){
+	        	     	  dq.push_front(b);
+	        	     	  for(int i=0;i<dq.size();i++){
+	        	     	  	   cout << dq[i] << " ";
+	        	     	  }
+	        	     	  cout << endl;
+	        	     }
+	        	     else if(a==1){
+                             dq.push_back(b);
+	        	     	  for(int i=0;i<dq.size();i++){
+	        	     	  	   cout << dq[i] << " ";
+	        	     	  }
+	        	     	  cout << endl;
 
-   return 0;
+	        	     }
+	        	     else{
+	        	     	  if(dq.size()>b){
+                                   it = dq.begin()+b;
+	        	     	   dq.erase(it);
+	        	     	   for(int i=0;i<dq.size();i++){
+	        	     	   	    cout << dq[i] <<" ";
+	        	     	   }
+                         cout << endl;
+
+	        	     	  }
+	        	     	  else{
+	        	     	  	     for(int i=0;i<dq.size();i++){
+	        	     	  	     	  cout << dq[i] <<" ";
+	        	     	  	     }
+	        	     	  	     cout << endl;
+	        	     	  }
+	        	     }
+
+	        }
+	return 0;
 }
