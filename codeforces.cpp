@@ -1,56 +1,38 @@
-#include<bits/stdc++.h>
-#define ll long long
-#define pb push_back
-#define vc vector
-#define vi vc<int>
-#define vl vc<ll>
-#define mp(x,y) make_pair(x,y)
-#define yes cout<<"YES"<<'\n';
-#define no cout<<"NO"<<'\n';
-#define tst int t;cin>>t;while(t--)
-#define srt(v) sort(v.begin(),v.end());
-#define rsrt(v) sort(v.rbegin(),v.rend());
-#define sajib ios::sync_with_stdio(false);cin.tie(0);
-#define rvs(v) reverse(v.begin(),v.end());
-#define F first
-#define S second
-#define MOD 1000000007
-#define gcd(a,b) __gcd(a,b)
-#define lcm(a,b) (a*b)/gcd(a,b)
-#define PI 2*acos(0.0)
-#define pii pair<int,int>
-#define fr(i,a,b) for(int i=a;i<=b;i++)
-#define coutv(v) for(auto it:v)cout<<it<<' ';cout<<endl;
-#define cinv(v) for(auto &it:v)cin>>it;
-#define all(v) v.begin(),v.end()
-#define rall(v) v.rbegin(),v.rend()
-#define ld long double
-#define nl '\n'
-const int N = 1e5;
+#include<iostream>
+#include<vector>
 using namespace std;
-#ifndef ONLINE_JUDGE
-#else
-#define dbg(x...)
-#endif
-mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
-int my_rand(int l, int r)
-{
-   return uniform_int_distribution<int>(l, r) (rng);
-}
-
 int32_t main(){
     
-      sajib
-      tst{
-         ll n,k,x; cin >> n >> k >> x;
-         ll sum1 = (k*(k+1)/2);
-         ll sum2 = ((n-k+1+n)*k/2);
-         if( sum1 > x || sum2 < x){
-            no
-         }
-         else{
-            yes
-         }
-      }
+          int t; cin >> t;
+          while(t--){
+            vector < long long > v1;
+            long long sum = 0;
+            long long found = 0;
+           long long a,b; cin >> a >> b;
+              long long n1=0,n2=0,n3=0,n4=0;
+              for(long long i=1;i<=a;i++){
+                  n1 = i;
+                  n2 = b*n1;
+                  n3 = n2*b;
+                  n4 = n3*b;
+                    sum = (n1+n2+n3+n4);
+                    if(sum==a){
+                     v1.push_back(n1);
+                     v1.push_back(n2);
+                     v1.push_back(n3);
+                     v1.push_back(n4);
+                       found  = 1;
+                       break;
+                    }
+                    else{
+                       sum=0;
+                    }
+              }
+              for(long long i=0;i<v1.size();i++){
+                 cout << v1[i] << " ";
+              }
+              cout << endl;
+              v1.clear();
+          }
    return 0;
 }
