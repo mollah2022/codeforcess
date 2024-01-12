@@ -1,38 +1,30 @@
-#include<iostream>
-#include<vector>
+#include<bits/stdc++.h>
 using namespace std;
+#define ll   long long
+#define FAST ios_base::sync_with_stdio(0); cin.tie(0);
+#define tst  int t; cin >> t; while(t--)
+#define yes  cout << "YES\n";
+#define no   cout << "NO\n";
+
 int32_t main(){
-    
-          int t; cin >> t;
-          while(t--){
-            vector < long long > v1;
-            long long sum = 0;
-            long long found = 0;
-           long long a,b; cin >> a >> b;
-              long long n1=0,n2=0,n3=0,n4=0;
-              for(long long i=1;i<=a;i++){
-                  n1 = i;
-                  n2 = b*n1;
-                  n3 = n2*b;
-                  n4 = n3*b;
-                    sum = (n1+n2+n3+n4);
-                    if(sum==a){
-                     v1.push_back(n1);
-                     v1.push_back(n2);
-                     v1.push_back(n3);
-                     v1.push_back(n4);
-                       found  = 1;
-                       break;
-                    }
-                    else{
-                       sum=0;
-                    }
-              }
-              for(long long i=0;i<v1.size();i++){
-                 cout << v1[i] << " ";
-              }
-              cout << endl;
-              v1.clear();
-          }
-   return 0;
+         FAST
+             int n; cin >> n;
+             int a1[n],a2[n];
+            int sum1=0,sum2=0;
+            for(int i=0;i<n;i++){
+                cin >> a1[i];
+                  sum1+=a1[i];
+            }  
+            for(int i=0;i<n;i++){
+                  cin >> a2[i];
+                  sum2+=a2[i];
+            }  
+            //cout << sum1 <<" " << sum2 << endl;
+            if(sum2>sum1){
+                  no
+            }
+            else{
+                yes
+            }
+     return 0;
 }
