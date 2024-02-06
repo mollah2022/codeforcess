@@ -7,19 +7,25 @@ using namespace std;
 #define no   cout << "NO\n";
 
 int32_t main(){
-           FAST 
-              tst{
-                   int n,k; cin >> n >> k;
-                   int l = (n*k);
-                 string s1 = "abcdefghijklmnopqrstuvwxyz";
-                 string s2 = "";
-                    
-                   for(int i=0;i<n;i++){
-                       for(int j=0;j<k;j++){
-                            s2+=s1[j];
+           FAST  
+             tst{
+                   int n; cin >> n;
+                   int l = 0;
+                   int r = 0;
+                   string s1; cin >> s1;
+                   for(int i=0;i<s1.size();i++){
+                       if(s1[i]=='B'){
+                            l = i;
+                            break;
                        }
                    }
-                   cout << s2 << endl;
-              }  
+                     for(int i=s1.size()-1;i>=0;i--){
+                       if(s1[i]=='B'){
+                            r = i;
+                            break;
+                       }
+                   }
+                   cout << (r-l)+1 << endl;
+             } 
      return 0;
 }
