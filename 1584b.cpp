@@ -7,13 +7,12 @@ using namespace std;
 #define no   cout << "NO\n";
 
 int32_t main(){
-           FAST 
-              tst{
-                   int n; cin >> n;
-
-                   int ans1 = (n/2)+(n%2);
-                   int ans2 = n/2;
-                   cout << ans1<<" "<<ans2<<endl;
-              }  
-     return 0;
+           FAST
+            tst{
+                int n,m; cin >> n >> m;
+                int ans = (n*m);
+                    int ans2 = ceil((double)ans/3);
+                    cout << ans2 << endl;
+            }
+  return 0;
 }

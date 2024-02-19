@@ -7,22 +7,21 @@ using namespace std;
 #define no   cout << "NO\n";
 
 int32_t main(){
-           FAST  
-             tst{
-             int x; cin >> x;
-    int n; cin >> n;
-    int ans = 1;
-    for (int i = 1; i * i <= x ; i++) {
-        if (x % i == 0) {
-            if (i >= n) {
-                ans = max(ans, x / i);
-            }
-            if (x / i >= n) {
-                ans = max(ans, i);
-            }
-        }
-    }
-    cout << ans << endl; 
- }
+           FAST
+              tst{
+                    ll n,m; cin >> n >> m;
+                    ll ans1 = (4*n)-2;
+                    ll ans2 = (m/2)+1;
+                    ll ans3 = (m/2);
+                     if(m==ans1){
+                          cout << ans2 << endl;
+                    }
+                    else if(m%2==0){
+                           cout << ans3 << endl;
+                    }
+                    else{
+                        cout << ans2 << endl;
+                    }
+              }   
      return 0;
 }

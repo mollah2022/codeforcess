@@ -8,24 +8,18 @@ using namespace std;
 
 int32_t main(){
            FAST  
-             tst{
+              tst{
                    int n; cin >> n;
-                   int l = 0;
-                   int r = 0;
-                   string s1; cin >> s1;
-                   for(int i=0;i<s1.size();i++){
-                       if(s1[i]=='B'){
-                            l = i;
-                            break;
-                       }
+                   int a1[n];
+                   for(int i=0;i<n;i++){
+                         cin >> a1[i];
                    }
-                     for(int i=s1.size()-1;i>=0;i--){
-                       if(s1[i]=='B'){
-                            r = i;
-                            break;
-                       }
+                   ll sum = 0;
+                   sort(a1,a1+n);
+                   for(int i=0;i<n-1;i++){
+                        sum+=abs(a1[i+1]-a1[i]);
                    }
-                   cout << (r-l)+1 << endl;
-             } 
+                   cout << sum << endl;
+              } 
      return 0;
 }
