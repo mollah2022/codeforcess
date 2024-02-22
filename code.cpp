@@ -1,68 +1,49 @@
 #include<bits/stdc++.h>
-#define ll long long
-#define pb push_back
-#define vc vector
-#define vi vc<int>
-#define vl vc<ll>
-#define mp(x,y) make_pair(x,y)
-#define yes cout<<"YES"<<'\n';
-#define no cout<<"NO"<<'\n';
-#define tst int t;cin>>t;while(t--)
-#define srt(v) sort(v.begin(),v.end());
-#define rsrt(v) sort(v.rbegin(),v.rend());
-#define sajib ios::sync_with_stdio(false);cin.tie(0);
-#define rvs(v) reverse(v.begin(),v.end());
-#define F first
-#define S second
-#define MOD 1000000007
-#define gcd(a,b) __gcd(a,b)
-#define lcm(a,b) (a*b)/gcd(a,b)
-#define PI 2*acos(0.0)
-#define pii pair<int,int>
-#define fr(i,a,b) for(int i=a;i<=b;i++)
-#define coutv(v) for(auto it:v)cout<<it<<' ';cout<<endl;
-#define cinv(v) for(auto &it:v)cin>>it;
-#define all(v) v.begin(),v.end()
-#define rall(v) v.rbegin(),v.rend()
-#define ld long double
-#define nl '\n'
-const int N = 1e5;
 using namespace std;
-#ifndef ONLINE_JUDGE
-#else
-#define dbg(x...)
-#endif
-mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
-int my_rand(int l, int r)
-{
-   return uniform_int_distribution<int>(l, r) (rng);
-}
+#define ll   long long
+#define FAST ios_base::sync_with_stdio(0); cin.tie(0);
+#define tst  int t; cin >> t; while(t--)
+#define yes  cout << "YES\n";
+#define no   cout << "NO\n";
 
 int32_t main(){
-    
-   sajib
-   tst{
-      int n; cin >> n;
-      vector < pair < int, int > > v1;
-      int y;
-      for(int i=0;i<n; i++){
-         cin >> y;
-         v1.push_back({y,i});
-      }
+           FAST
+             tst{
+                   int n; cin >> n;
+                   vector<int>v1,v2;
+                   bool pagol = false;
+                   //int n = k;
+                   while(n--){
+                       string s1; cin >> s1;
+                       int one = 0;
+                       for(int i=0;i<s1.size();i++){
+                            if(s1[i]=='0'){
+                                  one++;
+                            }
+                       }
+                       v1.push_back(one);
+                   }
+                   int count = 0;
+                   for(int i=0;i<v1.size();i++){       
+                             if(v1[i]!='0'){
+                                  count++;
+                                  int q = 0;
+                             int p = v1[i];
+                             int w = v1[i+1];
+                                q = abs(p-w);
+                                if(q==0){
+                                    v2.push_back(q);
+                                }
+                             }
+                   }
+                   int l = v2.size();
+                   if(count==l){
+                       cout <<"SQUARE\n";
+                   }
+                   else{
+                      cout <<"TRIANGLE\n";
+                   }
 
-      sort(v1.begin(),v1.end());
-      int k = n;
-      for(int i=0; i<n; i++){
-         v1[i].first = k;
-         k--;
-      }
-      int solve[n];
-      for(int i=0;i<n; i++){
-         solve[v1[i].second] = v1[i].first;
-      }
-      for(int i=0;i<n; i++)
-         cout << solve[i] <<" ";
-          cout << endl;
-   }
-   return 0;
+             }
+  return 0;
 }
