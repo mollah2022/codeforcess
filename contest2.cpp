@@ -8,20 +8,45 @@ using namespace std;
 
 int32_t main(){
            FAST
-              tst{
-                    ll n,m; cin >> n >> m;
-                    ll ans1 = (4*n)-2;
-                    ll ans2 = (m/2)+1;
-                    ll ans3 = (m/2);
-                     if(m==ans1){
-                          cout << ans2 << endl;
-                    }
-                    else if(m%2==0){
-                           cout << ans3 << endl;
-                    }
-                    else{
-                        cout << ans2 << endl;
-                    }
-              }   
-     return 0;
+            tst{
+                   int n; cin >> n;
+                   int a1[n];
+                   ll sum = 0;
+                   for(int i=0;i<n;i++){
+                        cin >> a1[i];
+                        sum+=a1[i];
+                   }
+                   if(sum%3==0){
+                       cout <<0<< endl;
+                       continue;
+                   }
+                   ll ans = sum,cnt=0;
+                   bool mafia = false;
+                   sort(a1,a1+n);
+                   for(int i=0;i<n;i++){
+                         ans-=a1[i];
+                         if(ans%3==0){
+                            cnt++;
+                            mafia = true;
+                            break;
+                         }
+                         else{
+                            ans+=a1[i];
+                         }
+                   }
+                   
+                   int count = 0;
+                   while(sum%3!=0){
+                        sum=sum+1;
+                        count++;
+                   }
+              //cout << min(value,count << endl;
+                   if(mafia == true){
+                       cout << 1 << endl;
+                   }
+                   else{
+                      cout << count << endl;
+                   }
+            }
+  return 0;
 }
