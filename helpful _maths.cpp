@@ -11,7 +11,7 @@ int32_t main(){
            FAST
              string s1; cin >> s1;
              string s2 = "";
-             for(int i=0;i<s1.size();i++){
+             for(int =0;i<s1.size();i++){
                    if( s1[i]>='1' && s1[i]<='3' ){
                         s2+=s1[i];
                    }
@@ -23,7 +23,7 @@ int32_t main(){
                       s3+='+';
              }
              for(int i=0;i<s3.size()-1;i++){
-                  cout << s3[i];
+                  cout << s[i];
              }
              cout << endl;
   return 0;

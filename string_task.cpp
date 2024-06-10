@@ -10,20 +10,26 @@ using namespace std;
 int32_t main(){
            FAST
              string s1; cin >> s1;
+             char ch;
              string s2 = "";
              for(int i=0;i<s1.size();i++){
-                   if( s1[i]>='1' && s1[i]<='3' ){
-                        s2+=s1[i];
-                   }
+                   ch = tolower(s1[i]);
+                   s2+=ch;
              }
-             sort(s2.begin(),s2.end());
+           //  sort(s2.begin(),s2.end());
              string s3 = "";
+             string s4 = "";
              for(int i=0;i<s2.size();i++){
-                      s3+=s2[i];
-                      s3+='+';
+                   if( s2[i]=='a' || s2[i]=='e' || s2[i]=='i' || s2[i]=='o' || s2[i]=='u' || s2[i]=='y'){
+                        s3+=s2[i];
+                   }
+                   else{
+                        s4+=s2[i];
+                   }
+                   
              }
-             for(int i=0;i<s3.size()-1;i++){
-                  cout << s3[i];
+             for(int i=0;i<s4.size();i++){
+                   cout << "." << s4[i];
              }
              cout << endl;
   return 0;
