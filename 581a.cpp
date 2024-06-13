@@ -9,11 +9,11 @@ using namespace std;
 
 int32_t main(){
            FAST
-           tst{
-                string s1,s2; cin >> s1 >> s2;
-                cout << s2[0]<<s1[1]<<s1[2];
-                cout << " ";
-                cout << s1[0] << s2[1]<<s2[2]<<endl;
-           }
+            int n,m; cin >> n >> m;
+            int mx = max(n,m);
+            int mn = min(n,m);
+            cout << mn << " ";
+            mx = mx - mn;
+            cout << mx/2 << endl;
   return 0;
 }

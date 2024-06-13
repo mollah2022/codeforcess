@@ -1,3 +1,4 @@
+//Bismillahir Rahmanir Rahim
 #include<bits/stdc++.h>
 using namespace std;
 #define ll   long long
@@ -8,45 +9,33 @@ using namespace std;
 
 int32_t main(){
            FAST
-            tst{
-                   int n; cin >> n;
-                   int a1[n];
-                   ll sum = 0;
-                   for(int i=0;i<n;i++){
+             tst{
+                   long long n; cin >> n;
+                   long long a1[n];
+                   for(int i=0;i<n;i++) {
                         cin >> a1[i];
-                        sum+=a1[i];
                    }
-                   if(sum%3==0){
-                       cout <<0<< endl;
-                       continue;
-                   }
-                   ll ans = sum,cnt=0;
-                   bool mafia = false;
-                   sort(a1,a1+n);
-                   for(int i=0;i<n;i++){
-                         ans-=a1[i];
-                         if(ans%3==0){
-                            cnt++;
-                            mafia = true;
-                            break;
-                         }
-                         else{
-                            ans+=a1[i];
-                         }
-                   }
-                   
-                   int count = 0;
-                   while(sum%3!=0){
-                        sum=sum+1;
-                        count++;
-                   }
-              //cout << min(value,count << endl;
-                   if(mafia == true){
-                       cout << 1 << endl;
-                   }
-                   else{
-                      cout << count << endl;
-                   }
-            }
+                    if(n==1 && a1[0]==1){
+                          cout << 0 << endl;
+                          continue;
+                    }
+                    if(n==1 && a1[0]==0){
+                          cout << 1 << endl;
+                          continue;
+                    }
+                    //sort(a1,a1+n);
+                    ll sum = 0;
+                    ll cnt  = 0;
+                for(int i=0;i<2;i++){
+                       sum+=a1[i];
+                       cnt++;
+                       ll x = a1[i+1];
+                       if(sum == x && sum!=1){
+                              break;
+                       }
+                }
+                cout << cnt << endl;
+               // cout << sum << endl;
+             }
   return 0;
 }

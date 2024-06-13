@@ -9,11 +9,14 @@ using namespace std;
 
 int32_t main(){
            FAST
-           tst{
-                string s1,s2; cin >> s1 >> s2;
-                cout << s2[0]<<s1[1]<<s1[2];
-                cout << " ";
-                cout << s1[0] << s2[1]<<s2[2]<<endl;
+           int a1[4];
+           for(int i=0;i<4;i++){
+                  cin >> a1[i];
            }
+           sort(a1,a1+4);
+           cout << a1[3]-a1[0] <<" ";
+           cout << a1[3]-a1[1] <<" ";
+           cout << a1[3]-a1[2] <<" ";
+           cout << endl;
   return 0;
 }

@@ -9,11 +9,14 @@ using namespace std;
 
 int32_t main(){
            FAST
-           tst{
-                string s1,s2; cin >> s1 >> s2;
-                cout << s2[0]<<s1[1]<<s1[2];
-                cout << " ";
-                cout << s1[0] << s2[1]<<s2[2]<<endl;
-           }
+            ll n,m; cin >> n >> m;
+            ll div = (n+1)/2;
+             if(m<=div){
+                   cout << (m*2)-1 << endl;
+             }
+             else{
+                   cout << (m-div)*2 << endl;
+             }
+
   return 0;
 }
