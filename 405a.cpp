@@ -9,14 +9,13 @@ using namespace std;
 
 int32_t main(){
            FAST()
-              tst{
-                      ll n; cin >> n;
-                      if( n & (n-1)  != 0 ){
-                           yes
-                      }
-                      else{
-                           no
-                      }
-              }
+                int n; cin >> n;
+                int a1[n];
+                for(int i=0;i<n;i++) cin >> a1[i];
+                    sort(a1,a1+n);
+                for(int i=0;i<n;i++){
+                       cout << a1[i] <<" ";
+                }
+                cout << endl;
   return 0;
 }

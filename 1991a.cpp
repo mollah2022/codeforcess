@@ -10,12 +10,15 @@ using namespace std;
 int32_t main(){
            FAST()
               tst{
-                      ll n; cin >> n;
-                      if( n & (n-1)  != 0 ){
-                           yes
+                      int a,b,c; cin >> a >> b >> c;
+                      if(a==b){
+                            cout << c << endl;
+                      }
+                      else if(b==c){
+                           cout << a << endl;
                       }
                       else{
-                           no
+                           cout << b << endl;
                       }
               }
   return 0;

@@ -9,19 +9,26 @@ using namespace std;
 
 int32_t main(){
            FAST()
-               int n,m; cin >> n >> m;
-               int a1[m];
-               for(int i=0;i<m;i++) cin >> a1[i];
-                std::vector<int> v1;
-                      for(int i=0;i<n;i++){
-                          v1.push_back(a1[i]);
-                  }
-                  int mx = INT_MIN;
-                  int mn = INT_MAX;
-                  for(int i=0;i<v1.size();i++){
-                       mx = max(mx,v1[i]);
-                       mn = min(mn,v1[i]);
-                  }
-                  cout << mx-mn << endl;
+                int n,m; cin >> n >> m;
+                int a1[m];
+                for(int i=0;i<m;i++) cin >> a1[i];
+                    int mn = INT_MAX;
+                for(int i=0;i<m/n;i++){
+                    int cnt = 0;
+                    int mx = INT_MIN;
+                    int mn1 = INT_MAX;
+                        for(int j=i;j<m;j++){
+                                    cnt++;
+                                     mx = max(mx,a1[j]);
+                                     mn1 = min(mn1,a1[j]);
+                                    if(cnt == n){
+                                          break;
+                                    }
+                        }
+                        cout << mx <<" " << mn1<<endl;
+                     int res = mx-mn1;
+                     mn = min(mn,res);
+                }
+                 cout << mn << endl;
   return 0;
 }

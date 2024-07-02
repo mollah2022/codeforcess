@@ -9,14 +9,20 @@ using namespace std;
 
 int32_t main(){
            FAST()
-              tst{
-                      ll n; cin >> n;
-                      if( n & (n-1)  != 0 ){
+                tst{
+                      int a,b,c; cin >> a >> b >> c;
+                      if(a+b>=10){
                            yes
+                      }
+                      else if(b+c>=10){
+                          yes
+                      }
+                      else if(a+c>=10){
+                          yes
                       }
                       else{
                            no
                       }
-              }
+                }
   return 0;
 }

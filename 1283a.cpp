@@ -9,14 +9,10 @@ using namespace std;
 
 int32_t main(){
            FAST()
-              tst{
-                      ll n; cin >> n;
-                      if( n & (n-1)  != 0 ){
-                           yes
-                      }
-                      else{
-                           no
-                      }
-              }
+                  tst{
+                         int n,m; cin >> n >> m;
+                         int ans = ((24*60)-((n*60)+m));
+                         cout << ans << endl;
+                  }
   return 0;
 }
