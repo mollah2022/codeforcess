@@ -7,36 +7,14 @@ using namespace std;
 #define yes  cout << "YES\n";
 #define no   cout << "NO\n";
 
-
-bool check_dialog_validity(const string& dialog) {
-    int question_count = 0;
-
-    for (char c : dialog) {
-        if (c == 'Q') {
-            question_count++;
-        } else if (c == 'A') {
-            if (question_count > 0) {
-                question_count--;
-            }
-        }
-    }
-
-    return question_count == 0;
-}
-
-int main() {
-    int t;
-    cin >> t;
-    while (t--) {
-        int n;
-        cin >> n;
-        string dialog;
-        cin >> dialog;
-        if (check_dialog_validity(dialog)) {
-            cout << "Yes" << endl;
-        } else {
-            cout << "No" << endl;
-        }
-    }
-    return 0;
+int32_t main(){
+           FAST()
+                   ll n,m; cin >> n >> m;
+                   if(n%m==0){
+                        cout << n/m << endl;
+                   }
+                   else{
+                             cout << (n/m)+1<< endl;   
+                   }
+  return 0;
 }

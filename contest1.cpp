@@ -9,19 +9,22 @@ using namespace std;
 
 int32_t main(){
            FAST()
-                tst{
-                       int a,b; cin >> a >> b;
-                       int ans1 =0,ans2=0;
-                       for(int i=a;i<=b;i++){
-                           if(i%2==0){
-                               ans1+=i;
-                           }
-                           else{
-                               ans2+=i;
-                           }
-                       }
-                      // cout << ans1 <<" " << ans2 << endl;
-                       cout << (ans1-ans2)<< endl;
-                }
+                 int n; cin >> n;
+                 vector<int >v1;
+                 while(n>0){
+                       int p = n%2;
+                       v1.push_back(p);
+                       n = n/2;
+                 }
+                 int cnt = 0;
+                 for(int i=0;i<v1.size();i++){
+                        if(v1[i]==0){
+                              cnt++;
+                        }
+                        else{
+                            break;
+                        }
+                 }
+                 cout << cnt << endl;
   return 0;
 }
