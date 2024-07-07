@@ -9,17 +9,17 @@ using namespace std;
 
 int32_t main(){
            FAST()
-               tst{
-                        int n; cin >> n;
-                        pair <int,int>p1;
-                        while(n--){
-                                  int a,b; cin >> a >> b;
-                                  if(a<=10){
-                                       p1.first(a);
-                                       p2.forst(b)
-                                  }
-                        }
-                      
-               }
+                tst{
+                            int t; cin >> t;
+                           int win = 0,best = 0;
+                           for(int i=0;i<t;i++){
+                                 int n,m; cin >> n >> m;
+                                 if(n<=10 && m>best){
+                                        win = i+1;
+                                        best = m;
+                                 }
+                           }
+                           cout << win << endl;
+                }
   return 0;
 }

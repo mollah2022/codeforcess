@@ -7,16 +7,43 @@ using namespace std;
 #define yes  cout << "YES\n";
 #define no   cout << "NO\n";
 
-char lowercase(char ch){
-        return (ch=='c' || ch=='o' || ch=='d' || ch=='r' || ch=='e' || ch=='f' || ch=='o' || ch=='c' || ch=='e' || ch=='s');
-}
-
 int32_t main(){
            FAST()
-              tst{
-                      char ch; cin >> ch;
-                      if(lowercase(ch)) cout << "YES\n";
-                      else cout << "NO\n";
-              }  
+               tst{
+                     int n; cin >> n;
+                     string s1; cin >> s1;
+                  //   sort(s1.begin(),s1.end());
+                     int u=0,d=0,r=0,l=0;
+                     bool find = false;
+                     for(int i=0;i<s1.size();i++){
+
+                               if(s1[i]=='U'){
+                                  u++;
+                               }
+                               else if(s1[i]=='D'){
+                                  u--;
+                               }
+                              else  if(s1[i]=='R'){
+                                   r++;
+                               }
+                               else if(s1[i]=='L'){
+                                   r--;
+                               }
+
+                                 if(u==1 && r==1){
+                                   find = true;
+                                    break;
+                               }
+                               
+                     }
+                     //cout << u <<" "<< r << endl;
+                     if(find == true){
+                          yes
+                     }
+                     else{
+                           no
+                     }
+            }
+                   
   return 0;
 }

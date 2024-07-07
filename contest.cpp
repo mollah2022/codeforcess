@@ -1,3 +1,4 @@
+
 //Bismillahir Rahmanir Rahim
 #include<bits/stdc++.h>
 using namespace std;
@@ -9,12 +10,23 @@ using namespace std;
 
 int32_t main(){
            FAST()
-                   ll n,m; cin >> n >> m;
-                   if(n%m==0){
-                        cout << n/m << endl;
-                   }
-                   else{
-                             cout << (n/m)+1<< endl;   
-                   }
+               int n,m,k; cin >> n >> m >> k;
+               vector<int>v1;
+               for(int i=0;i<n;i++){
+               	    int a; cin >> a;
+               	    v1.push_back(a);
+               }
+               m = m-1;
+               for(int i=0;i<v1.size();i++){
+               	   if(i==m){
+               	   	    
+               	   	     cout << v1[i] <<" ";
+               	   	      cout <<k<<" ";
+               	   }
+               	   else{
+               	   	   cout << v1[i] <<" ";
+               	   }
+               }
+               cout << endl;
   return 0;
 }
