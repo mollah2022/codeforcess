@@ -9,36 +9,21 @@ using namespace std;
 
 int32_t main(){
            FAST()
-               tst{
-                       int n,m; cin >> n >> m;
-                       int a1[101];
-                       for(int i=0;i<n;i++) cin >> a1[i];
-                       int a2[101];
-                   for(int i=0;i<101;i++){
-                         a2[i]=0;
-                   }
-                   for(int i=0;i<n;i++){
-                       a2[a1[i]]++;
-                   }
-                   int mx = INT_MIN;
-                   for(int i=0;i<101;i++){
-                         mx = max(mx,a2[i]);
-                   }
-                   int find = 0;
-                   for(int i=0;i<101;i++){
-                        if(i==m){
-                              find = a2[i];
-                              break;
-                        }
-                   }
-                  // cout << mx <<" " <<find<<endl;
-                   if(find>=mx){
-                          yes
-                   }
-                   else{
-                       no
-                   }
-
-               }
+                tst{
+                           int n,m; cin >> n >> m;
+                           int a1[n];
+                           bool find = false;
+                           for(int i=0;i<n;i++) cin >> a1[i];
+                            for(int i=0;i<n;i++){
+                                   if(a1[i]==m){
+                                       find = true;
+                                        cout << "YES\n";
+                                        break;
+                                   }
+                            }
+                           if(find==0){
+                               cout << "NO" << endl;
+                           }
+                }
   return 0;
 }
