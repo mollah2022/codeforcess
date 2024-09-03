@@ -1,38 +1,17 @@
+//Bismillahir Rahmanir Rahim
 #include<bits/stdc++.h>
 using namespace std;
+#define ll   long long
+#define FAST() ios_base::sync_with_stdio(0); cin.tie(0);
+#define tst  int t; cin >> t; while(t--)
+#define yes  cout << "YES\n";
+#define no   cout << "NO\n";
 
-int32_t main()
-{
-	ios_base::sync_with_stdio(0);
-	cin.tie(0);
-
-	int t; cin >> t;
-	while(t--)
-	{
-		int a,b,c,d; cin >> a >> b >> c >> d;
-		int a1[a];
-		for(int i=0; i<a; i++)
-		{
-			cin >> a1[i];
-		}
-		int count = 0;
-		for(int i=0;i<a;i++)
-		{
-			for(int j=1;j<b;j++)
-			{
-				int ans = (j*c);
-				int ans1 = abs(a1[i]-d);
-				if(ans==ans1)
-				{
-					count++;
-				}
-				else
-				{
-					continue;
-				}
-			}
-		}
-		cout << count << endl;
-	}
-	return 0;
+int32_t main(){
+           FAST()
+                tst{
+                        int n,m; cin >> n >> m;
+                        cout << abs(n-m) << endl;
+                }
+  return 0;
 }
