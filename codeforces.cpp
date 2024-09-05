@@ -2,29 +2,37 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define ll   long long
-#define FAST ios_base::sync_with_stdio(0); cin.tie(0);
+#define FAST() ios_base::sync_with_stdio(0); cin.tie(0);
 #define tst  int t; cin >> t; while(t--)
 #define yes  cout << "YES\n";
 #define no   cout << "NO\n";
 
 int32_t main(){
-           FAST
-             string s1; cin >> s1;
-             string s2 = "";
-             for(int i=0;i<s1.size();i++){
-                   if( s1[i]>='1' && s1[i]<='3' ){
-                        s2+=s1[i];
+           FAST()
+                int n,m; cin >> n >> m;
+                int a1[n][m];
+                for( int i = 0 ; i < n ; i++ ){
+                    for( int j = 0; j < m ; j++ ){
+                             cin >> a1[i][j];
+                    }
+                }
+                   int x; cin >> x;
+                   bool find = false;
+                   for(int i = 0 ; i < n ; i++ ){
+                        for( int j = 0 ; j < m ; j++ ){
+                                if(a1[i][j]==x){
+                                       find = true;
+                                       //cout << a1[i][j] << endl;
+                                       break;
+                                }
+                        }
                    }
-             }
-             sort(s2.begin(),s2.end());
-             string s3 = "";
-             for(int i=0;i<s2.size();i++){
-                      s3+=s2[i];
-                      s3+='+';
-             }
-             for(int i=0;i<s3.size()-1;i++){
-                  cout << s3[i];
-             }
-             cout << endl;
+
+                   if(find == 1){
+                         cout <<"will not take number\n";
+                   }
+                   else{
+                       cout <<"will take number\n";
+                   }
   return 0;
 }
